@@ -1,0 +1,14 @@
+.navigation_entete{
+    display: flex;
+    justify-content: space-between;
+}
+.navigation_entete li{
+    list-style: none;
+}
+.filtre_sencondaire{
+    display: flex;
+    justify-content: center; 
+}
+.filtre_sencondaire li{
+    list-style: none;
+}
