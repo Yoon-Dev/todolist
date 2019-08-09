@@ -14,8 +14,8 @@
                 <legend style="display: contents;">Ajouter une tâche</legend>
                 <br>
 <!-- lien de choix de formulaire -->
-                <a href="#tache" id="lien_tache_simple">tache</a>
-                <a href="#repe" id="lien_tache_repe">repe</a>
+                <a class="lien-select-form" href="#tache" id="lien_tache_simple">tache</a>
+                <a class="lien-select-form" href="#repe" id="lien_tache_repe">repe</a>
 
             </fieldset>
     </div>

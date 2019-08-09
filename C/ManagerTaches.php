@@ -11,6 +11,12 @@ class ManagerTaches{
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // fonctionnalité
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    public function InitRepe(string $jour){
+        // Initialise les REPE qui ne sont pas en retard
+        $q = $this->_conn->prepare('UPDATE `tache` SET etat_repe = 1 WHERE repe_jour != :jour AND etat_repe = 2 AND repe_confirme = 1');
+        $q->execute([':jour' => $jour]);
+    }
+// °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
     public function addTachesimple(Taches $tache){
         // ajoute une tache simple dans la bdd
         // echo"je suis dans la methode";
@@ -25,7 +31,7 @@ class ManagerTaches{
     }
 // °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
     public function addTachesrepe(Taches $tache){
-        // ajoute une tache simple dans la bdd
+        // ajoute une tache REPE dans la bdd
         // echo"je suis dans la methode";
         // echo "nom : ".$tache->nom()." detail : ".$tache->detail()." limite : ".$tache->limite()." types : ".$tache->types();
         $q = $this->_conn->prepare('INSERT INTO tache(nom, detail, limite, types, etat, etat_repe, repe_jour, repe_confirme) VALUES(:nom, :detail, NULL, :types, "bon", 1, :repe_jour, 1)');
@@ -82,7 +88,7 @@ class ManagerTaches{
         // si elle sont de type "normal" ou si repe_jour est egal a jour
     $taches = [];
 
-    $q = $this->_conn->prepare('SELECT * FROM `tache` WHERE repe_jour is null OR repe_jour = :jour AND etat_repe = 1');
+    $q = $this->_conn->prepare('SELECT * FROM `tache` WHERE repe_jour is null OR repe_jour = :jour AND etat_repe = 1 OR repe_confirme = 2');
     $q->execute([':jour' => $jour]);
     while ($donnees = $q->fetch(PDO::FETCH_ASSOC))
     {
@@ -133,7 +139,7 @@ class ManagerTaches{
         // si elle sont de type "normal" ou si repe_jour est egal a jour
     $taches = [];
 
-    $q = $this->_conn->prepare('SELECT * FROM `tache` WHERE repe_jour = :jour AND etat_repe = 1 OR limite = :today');
+    $q = $this->_conn->prepare('SELECT * FROM `tache` WHERE repe_jour = :jour AND etat_repe = 1 OR limite = :today OR repe_confirme = 2');
     $q->bindValue(':jour', $jour, PDO::PARAM_STR);
     $q->bindValue(':today', $today, PDO::PARAM_STR);
     $q->execute();
