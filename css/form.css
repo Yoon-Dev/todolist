@@ -1,3 +1,92 @@
+/* °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°° */
+	/* Basse */
+/* °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°° */
+legend{
+    border-bottom: 1px solid #C2C2C2;
+    font-weight: bold;
+    font-style: italic;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 20px;
+    font-size: 15px;
+    padding-bottom: 3px;
+    text-align: center;
+    min-width: 100%;
+    font-size: 2em;
+}
+/* °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°° */
+	/* Module */
+/* °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°° */
+.form-style label{
+    display: block;
+	margin: 0px 0px 15px 0px;
+}
+
+.form-style span.required{
+	color:red;
+}
+
+.form-style input.input-field,  
+.form-style .textarea-field, 
+ .form-style .select-field{
+	box-sizing: border-box;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+border: 1px solid #C2C2C2;
+box-shadow: 1px 1px 4px #EBEBEB;
+-moz-box-shadow: 1px 1px 4px #EBEBEB;
+-webkit-box-shadow: 1px 3px 0px rgb(46, 13, 13);
+border-radius: 3px;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+padding: 7px;
+outline: none;
+}
+.form-style .input-field:focus, 
+.form-style .textarea-field:focus,  
+.form-style .select-field:focus,
+.form-style input[type="date"]:focus{
+	border: 2px solid navy;
+}
+
+.form-style input[type=submit],
+.form-style input[type=button],
+.form-style input[type=file]{
+	border: none;
+	padding: 8px 15px 8px 15px;
+	background: navy;
+	color: #fff;
+	box-shadow: 1px 1px 4px rgb(46, 13, 13);;
+	-moz-box-shadow: 1px 1px 4px rgb(46, 13, 13);;
+	-webkit-box-shadow: 1px 1px 4px rgb(46, 13, 13);;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+.form-style input[type=submit]{
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+/* DATE */
+input[type="date"] {
+    appearance: none;
+    -webkit-appearance: none;
+    color: #000;
+    font-family: "Helvetica", arial, sans-serif;
+    font-size: 18px;
+    border: 1px solid #ecf0f1;
+    -webkit-box-shadow: 1px 3px 0px rgb(46, 13, 13);
+    border-radius: 3px;
+    background: #fff;
+    padding: 5px;
+    display: inline-block !important;
+    visibility: visible !important;
+}
+/* °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°° */
+	/* State */
+/* °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°° */
+.form-style input[type=submit]:hover,
+.form-style input[type=button]:hover{
+	box-shadow: 6px 6px 12px rgba(0,0,0,0.2);
+}
 .lien-select-form{
     color: white;
 }

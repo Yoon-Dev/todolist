@@ -13,9 +13,13 @@ $(".lien_jquery-nom").click(function (ev) {
     // }
 
     // affiche les ingredient
-    // var parent = $(this).parent("h3");
+        var parent_1 = $(this).parent('.col-2');
+        var parent_2 = parent_1.parent('.row');
+        var parent_3 = parent_2.parent('.box-lien');
+        var parent_4 = parent_3.parent('.box');
     // parent.siblings('div').each(function (i) {
-        $('.list-info-tache').slideToggle(400);
+        var tache = parent_4.children('.list-info-tache');
+        $(tache).slideToggle(400);
 
     // });
 });

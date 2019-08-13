@@ -129,17 +129,19 @@ if (empty($taches))
 else
 {
 ?>
-
+<div class="contairer">
+  <div class="row">
 <?php
   foreach ($taches as $uneTaches)
   {
 
 ?>
-<div class="contairer">
-    <div class="col-12 text-center my-5">
+
+    <div class="col-12 col-md-6 col-xl-4 text-center my-5">
         <div class="box">
             <div class="box-lien">
-                <h3 class="nom-contenant"><?php echo$uneTaches->nom();?>
+              <div class="row">
+                <div class="col-2">
                     <?php
 if($uneTaches->repe_jour() == null){
   // si c'est une tache simple
@@ -153,8 +155,16 @@ if($uneTaches->repe_jour() == null){
                     <?php
 }
 ?>
-                    <a class="lien_jquery-nom" href="">bru</a></h3>
+</div>
+<div class="col-8">
+<h2 class="nom-contenant"><?php echo$uneTaches->nom();?></h2>
+</div>
+<div class="col-2 tex">
+                    <a class="lien_jquery-nom" href="">bru</a>
+                    </div>
+            <!-- fin row titre -->
             </div>
+                  </div>
             <div class="list-info-tache" id="list-info-tache">
                 <h5><?php echo "id : ".$uneTaches->id(); ?></h5>
                 <h5><?php echo "detail : ".$uneTaches->detail(); ?></h5>
@@ -186,12 +196,14 @@ if($uneTaches->repe_jour() != null && isset($_GET['repe']) && !empty($_GET['repe
             </div>
         </div>
     </div>
-</div>
+
 <?php
 
   }
 }
 ?>
+</div>
+</div>
 <script src="./js/form.js"></script>
 <script src="./js/display.js"></script>
 </body>

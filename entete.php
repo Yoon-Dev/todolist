@@ -16,6 +16,7 @@ $adresse = "http://".$_SERVER['SERVER_NAME'].$_SERVER["REQUEST_URI"];
     <script src="./js/plugin/jquery/jquery-3.4.0.js"></script>
 
 
+
     <title>TODOLIST</title>
 </head>
 
@@ -28,11 +29,13 @@ $adresse = "http://".$_SERVER['SERVER_NAME'].$_SERVER["REQUEST_URI"];
         </div>
         <div class="row">
         <div class="col-12 my-2">
+        <nav class="cl-effect-7">
             <ul class="navigation_entete">
                 <li><a href="http://localhost/todolist/?types=<?="etude" ?>">ETU</a></li>
                 <li><a href="http://localhost/todolist/?types=<?="general" ?>">GEN</a></li>
                 <li><a href="http://localhost/todolist/?types=<?="devellopement" ?>">DEV</a></li>
             </ul>
+        </nav>
         </div>
         </div>
         <div class="row">
@@ -53,6 +56,8 @@ $adresse = "http://".$_SERVER['SERVER_NAME'].$_SERVER["REQUEST_URI"];
 
         
     </div>
+
+
 </body>
 
 </html>
