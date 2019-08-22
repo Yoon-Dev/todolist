@@ -88,5 +88,15 @@ input[type="date"] {
 	box-shadow: 6px 6px 12px rgba(0,0,0,0.2);
 }
 .lien-select-form{
-    color: white;
+    margin: 10px;
+}
+.lien-select-form_click{
+    font-size: 1.2em;
+    padding: 10px;
+    font-weight: 700;
+    background: url('../img/gif/link_form_gif.gif') 0px 0px;
+    background-size: cover;
+    background-clip: text;
+    color: transparent;
+    font-family: helvetica, arial;
 }

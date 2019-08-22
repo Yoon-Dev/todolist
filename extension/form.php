@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <div class="container text-center">
+    <div class="container text-center marg-contain">
         <div class="col-12">
             <!-- CHOIX du formulaire -->
             <fieldset>
@@ -25,7 +25,6 @@
             <div id="tache_simple">
                 <form action="" method="post">
                     <fieldset>
-                        <legend class="ml-3">Ajouter une tache simple</legend><br>
                         <div class="row">
                             <div class="col-xl-3 text-center">
                                 <label for="nom"><span>Nom</span><span class="required">*</span><br><input
@@ -64,7 +63,6 @@
             <div id="tache_repe">
                 <form action="" method="post">
                     <fieldset>
-                        <legend>Ajouter une tache répétitive</legend><br>
                         <div class="row">
                             <div class="col-xl-3 text-center">
                                 <label for="nom_repe"><span>Nom</span><span class="required">*</span><br><input type="text"
@@ -95,10 +93,10 @@
                                     </select></label>
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row mt-5">
                             <div class="col-12 text-center">
                                 <label for="tache_repe"><input type="submit" name="tache_repe"
-                                        value="submit_repe"></label>
+                                        value="submit"></label>
                             </div>
                         </div>
                     </fieldset>

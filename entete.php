@@ -14,50 +14,39 @@ $adresse = "http://".$_SERVER['SERVER_NAME'].$_SERVER["REQUEST_URI"];
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/form.css">
     <script src="./js/plugin/jquery/jquery-3.4.0.js"></script>
-
-
-
+    <script src="./js/display.js"></script>
     <title>TODOLIST</title>
 </head>
 
 <body>
-    <div class="container-fluid text-center">
+    <div class="container-fluid text-center header-nav">
         <div class="row">
-        <div class="col-12 ">
-            <a href="http://localhost/todolist/">LOGO</a>
-        </div>
-        </div>
-        <div class="row">
-        <div class="col-12 my-2">
-        <nav class="cl-effect-7">
-            <ul class="navigation_entete">
-                <li><a href="http://localhost/todolist/?types=<?="etude" ?>">ETU</a></li>
-                <li><a href="http://localhost/todolist/?types=<?="general" ?>">GEN</a></li>
-                <li><a href="http://localhost/todolist/?types=<?="devellopement" ?>">DEV</a></li>
-            </ul>
-        </nav>
-        </div>
+            <div class="col-12 ">
+                <a href="http://localhost/todolist/">LOGO</a>
+            </div>
         </div>
         <div class="row">
-        <div class="col-12">
-        <ul class="filtre_sencondaire">
-                <li><a href="http://localhost/todolist/?date=<?="today" ?>">Today</a></li>
-                <li><a href="http://localhost/todolist/?repe=<?="true" ?>">BACKOFFICE</a></li>
-            </ul>
-        </div>
+            <div class="col-12 my-2">
+                <nav class="cl-effect-7">
+                    <ul class="navigation_entete">
+                        <li><a href="http://localhost/todolist/?types=<?="etude" ?>">ETU</a></li>
+                        <li><a href="http://localhost/todolist/?types=<?="general" ?>">GEN</a></li>
+                        <li><a href="http://localhost/todolist/?types=<?="devellopement" ?>">DEV</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
         <div class="row">
-        <div class="col-12">
-            <h1><?php echo date("m-d"); ?></h1>
+            <div class="col-12">
+                <ul class="filtre_sencondaire">
+                    <li><a href="http://localhost/todolist/?date=<?="today" ?>">Today</a></li>
+                    <li><a href="http://localhost/todolist/?repe=<?="true" ?>">Backoffice</a></li>
+                </ul>
+            </div>
         </div>
+        <div class="row">
+            <div class="col-12">
+                <h1 class="today-logo"><?php echo date("m-d"); ?></h1>
+            </div>
         </div>
-        
-
-
-        
     </div>
-
-
-</body>
-
-</html>

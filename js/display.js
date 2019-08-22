@@ -3,15 +3,14 @@ $('.list-info-tache').hide();
 // DISLAY on click
 $(".lien_jquery-nom").click(function (ev) {
     ev.preventDefault();
-    // if ($(this).hasClass("rotation-lien")) {
-    //     $(this).removeClass("rotation-lien");
+    if ($(this).hasClass("rotation-lien")) {
+        $(this).removeClass("rotation-lien");
         
-    // }
-    // else {
-    //     $(this).addClass("rotation-lien")
+    }
+    else {
+        $(this).addClass("rotation-lien")
   
-    // }
-
+    }
     // affiche les ingredient
         var parent_1 = $(this).parent('.col-2');
         var parent_2 = parent_1.parent('.row');
@@ -23,6 +22,22 @@ $(".lien_jquery-nom").click(function (ev) {
 
     // });
 });
-
+// °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+// SCROLL DOWN
+// °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+(function () {
+    var previousScroll = 0;
+    $(window).scroll(function(){
+       var currentScroll = $(this).scrollTop();
+       if (currentScroll > previousScroll){
+           console.log('down');
+           $('.header-nav').fadeOut(200);
+       } else {
+          console.log('up');
+          $('.header-nav').fadeIn(200);
+       }
+       previousScroll = currentScroll;
+    });
+}());
 
 });

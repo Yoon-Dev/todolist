@@ -11,6 +11,26 @@ class ManagerTaches{
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // fonctionnalité
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    public function RetardSimple($today){
+        // Marque les tache simple en retard
+        $today = str_split ($today, 1);
+        $today = $today[0].$today[1].$today[2].$today[3].$today[5].$today[6].$today[8].$today[9];
+        $today = intval($today);
+        $q = $this->_conn->prepare('SELECT `id`, `limite` FROM `tache` WHERE `repe_jour` IS NULL');
+        $q->execute();
+        while ($donnees = $q->fetch(PDO::FETCH_ASSOC))
+    {
+        $test = $donnees['limite'];
+        $test = $test[0].$test[1].$test[2].$test[3].$test[5].$test[6].$test[8].$test[9];
+        $test = intval($test);
+        if($today > $test){
+            $where = $donnees['id'];
+            $query = $this->_conn->prepare('UPDATE `tache` SET etat = "mauvais" WHERE id = :id');
+            $query->execute([':id' => $where]);
+        }
+    }
+    }
+// °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
     public function InitRepe(string $jour){
         // Initialise les REPE qui ne sont pas en retard
         $q = $this->_conn->prepare('UPDATE `tache` SET etat_repe = 1 WHERE repe_jour != :jour AND etat_repe = 2 AND repe_confirme = 1');
@@ -19,8 +39,6 @@ class ManagerTaches{
 // °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
     public function addTachesimple(Taches $tache){
         // ajoute une tache simple dans la bdd
-        // echo"je suis dans la methode";
-        // echo "nom : ".$tache->nom()." detail : ".$tache->detail()." limite : ".$tache->limite()." types : ".$tache->types();
         $q = $this->_conn->prepare('INSERT INTO tache(nom, detail, limite, types, etat, etat_repe, repe_jour, repe_confirme) VALUES(:nom, :detail, :limite, :types, "bon", NULL, NULL, NULL)');
         $q->bindValue(':nom', $tache->nom());
         $q->bindValue(':detail', $tache->detail());
@@ -32,8 +50,6 @@ class ManagerTaches{
 // °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
     public function addTachesrepe(Taches $tache){
         // ajoute une tache REPE dans la bdd
-        // echo"je suis dans la methode";
-        // echo "nom : ".$tache->nom()." detail : ".$tache->detail()." limite : ".$tache->limite()." types : ".$tache->types();
         $q = $this->_conn->prepare('INSERT INTO tache(nom, detail, limite, types, etat, etat_repe, repe_jour, repe_confirme) VALUES(:nom, :detail, NULL, :types, "bon", 1, :repe_jour, 1)');
         $q->bindValue(':nom', $tache->nom());
         $q->bindValue(':detail', $tache->detail());
@@ -45,9 +61,7 @@ class ManagerTaches{
     }
 // °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
     public function editTachesimple(Taches $edit){
-        // EDIT une tache simple
-        // echo "je suis dans la methode";
-        // echo "nom : ".$edit->nom()." detail : ".$edit->detail()." limite : ".$edit->limite()." types : ".$edit->types();
+// EDIT une tache simple
         $q = $this->_conn->prepare('UPDATE `tache`SET nom = :nom, detail = :detail, limite = :limite, types = :types WHERE id = :id');
         $q->bindValue(':id', $edit->id());
         $q->bindValue(':nom', $edit->nom());
@@ -59,8 +73,6 @@ class ManagerTaches{
 // °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
     public function editRepe(Taches $edit){
         // EDIT une REPE
-        echo "je suis dans la methode";
-        echo "nom : ".$edit->nom()." detail : ".$edit->detail()." jour : ".$edit->repe_jour()." types : ".$edit->types();
         $q = $this->_conn->prepare('UPDATE `tache`SET nom = :nom, detail = :detail, repe_jour = :repe_jour, types = :types WHERE id = :id');
         $q->bindValue(':id', $edit->id());
         $q->bindValue(':nom', $edit->nom());
@@ -81,6 +93,12 @@ class ManagerTaches{
     public function delrepe($tache_repe){
         $q = $this->_conn->prepare('UPDATE `tache` SET etat_repe = 2 WHERE id = :id');
         $q->execute(['id' => $tache_repe]);
+    }
+// °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+    // Supprime !!VRAIMENT!! une REPE
+    public function supRepe($repe_sup){
+        $q = $this->_conn->prepare('DELETE FROM `tache` WHERE id = :id');
+        $q->execute(['id' => $repe_sup]);
     }
 // °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
     public function getList($jour){
@@ -139,7 +157,7 @@ class ManagerTaches{
         // si elle sont de type "normal" ou si repe_jour est egal a jour
     $taches = [];
 
-    $q = $this->_conn->prepare('SELECT * FROM `tache` WHERE repe_jour = :jour AND etat_repe = 1 OR limite = :today OR repe_confirme = 2');
+    $q = $this->_conn->prepare('SELECT * FROM `tache` WHERE repe_jour = :jour AND etat_repe = 1 OR limite = :today OR etat = "mauvais"');
     $q->bindValue(':jour', $jour, PDO::PARAM_STR);
     $q->bindValue(':today', $today, PDO::PARAM_STR);
     $q->execute();
