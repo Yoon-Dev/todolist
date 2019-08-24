@@ -1,6 +1,20 @@
 $(document).ready(function (){
 $('.list-info-tache').hide();
+$('.navigation_entete').hide();
 // DISLAY on click
+
+$(".lien-navigation-entente").click(function (ev) {
+    ev.preventDefault();
+    if ($(this).hasClass("rotation-lien")) {
+        $(this).removeClass("rotation-lien");
+        
+    }
+    else {
+        $(this).addClass("rotation-lien")
+  
+    }
+    $('.navigation_entete').slideToggle();
+});
 $(".lien_jquery-nom").click(function (ev) {
     ev.preventDefault();
     if ($(this).hasClass("rotation-lien")) {

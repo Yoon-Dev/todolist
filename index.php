@@ -180,23 +180,20 @@ if($uneTaches->repe_jour() == null){
   // si c'est une tache simple
 ?>
                                     <a class="lien_del"
-                                        href="?del=<?=$uneTaches->id();?>&amp;redirection=<?=$redirection_edit;?>"><img
-                                            class="icone" src="./img/icone/done_todolist.png" alt="done"></a>
+                                        href="?del=<?=$uneTaches->id();?>&amp;redirection=<?=$redirection_edit;?>"><i class="fas fa-minus"></i></a>
                                     <?php
 }
 if($uneTaches->repe_jour() != null && isset($_GET['repe']) && !empty($_GET['repe'])){
   // si dans le BACKOFFICE
 ?>
-                                    <a href="?sup_repe=<?=$uneTaches->id();?>"><img class="icone"
-                                            src="./img/icone/DEL_todolist.png" alt="done"></a>
+                                    <a class="lien_del" href="?sup_repe=<?=$uneTaches->id();?>"><i class="far fa-trash-alt"></i></a>
                                     <?php
 }
 if($uneTaches->repe_jour() != null && !isset($_GET['repe']) && empty($_GET['repe'])){
   // si c'est une tache repe
 ?>
                                     <a class="lien_del"
-                                        href="?del_repe=<?=$uneTaches->id();?>&amp;redirection=<?=$redirection_edit;?>"><img
-                                            class="icone" src="./img/icone/done_todolist.png" alt="done"></a>
+                                        href="?del_repe=<?=$uneTaches->id();?>&amp;redirection=<?=$redirection_edit;?>"><i class="fas fa-minus"></i></a>
                                     <?php
 }
 ?>
@@ -205,9 +202,8 @@ if($uneTaches->repe_jour() != null && !isset($_GET['repe']) && empty($_GET['repe
                                     <h2 class="nom-contenant <?php echo$uneTaches->etat();?>">
                                         <?php echo$uneTaches->nom();?></h2>
                                 </div>
-                                <div class="col-2 tex">
-                                    <a class="lien_jquery-nom" href=""><img class="icone"
-                                            src="./img/icone/chevron_todolist.png" alt="done"></a>
+                                <div class="col-2">
+                                    <a class="lien_jquery-nom" href=""><i class="fas fa-chevron-up"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -237,15 +233,13 @@ else{
 if($uneTaches->repe_jour() == null){
   // si c'est une tache simple
 ?>
-                                        <a href="?edit=<?=$uneTaches->id()?>&amp;redirection=<?=$redirection_edit;?>"><img
-                                                class="icone-edit" src="./img/icone/edit_todolist.png" alt="done"></a>
+                                        <a class="lien-edit" href="?edit=<?=$uneTaches->id()?>&amp;redirection=<?=$redirection_edit;?>"><i class="far fa-edit"></i></a>
                                         <?php
 }
 if($uneTaches->repe_jour() != null && isset($_GET['repe']) && !empty($_GET['repe'])){
   // si c'est une tache repe
 ?>
-                                        <a href="?edit_repe=<?=$uneTaches->id();?>"><img class="icone-edit"
-                                                src="./img/icone/edit_todolist.png" alt="done"></a>
+                                        <a href="?edit_repe=<?=$uneTaches->id();?>"><i class="far fa-edit"></i></a>
                                         <?php
 }
 ?>

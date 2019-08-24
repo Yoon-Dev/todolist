@@ -18,7 +18,8 @@ legend{
 /* °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°° */
 .form-style label{
     display: block;
-	margin: 0px 0px 15px 0px;
+    margin: 0px 0px 15px 0px;
+    color: white;
 }
 
 .form-style span.required{
@@ -89,6 +90,7 @@ input[type="date"] {
 }
 .lien-select-form{
     margin: 10px;
+    color: #ffffffcf;
 }
 .lien-select-form_click{
     font-size: 1.2em;
