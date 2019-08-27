@@ -22,10 +22,10 @@ legend{
 .lien-select-form{
     margin: 10px;
     color: #ffffffcf;
+    background: url('../img/gif/link_form_gif.gif') 0px 0px;
     background-size: cover;
     background-clip: text;
     -webkit-background-clip: text;
-    background: url('../img/gif/link_form_gif.gif') 0px 0px;
 }
 /* °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°° */
 .lien-select-form_click{
