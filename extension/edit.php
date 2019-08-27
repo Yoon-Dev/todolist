@@ -11,38 +11,36 @@
                 <a class="lien-select-form lien-select-form_click" href="#repe">EDIT</a>
                 <div class="row">
                     <div class="col-xl-3 text-center">
-                        <label for="nom"><span>Nom</span><span class="required">*</span><br><input type="text"
-                                class="input-form input-field" name="nom" id=""
-                                value="<?php echo $t_edit->nom();?>"></label>
+                        <label for="nom"><span>Nom</span><span class="required">*</span><br><input type="text" class="input-form input-field" name="nom" id="" value="<?php echo $t_edit->nom();?>"></label>
                     </div>
                     <div class="col-xl-3 text-center">
-                        <label for="detail"><span>Detail</span><br><input type="text" class="input-form input-field"
-                                name="detail" id="" value="<?php echo $t_edit->detail(); ?>"></label>
+                        <label for="detail"><span>Detail</span><br><input type="text" class="input-form input-field" name="detail" id="" value="<?php echo $t_edit->detail(); ?>"></label>
                     </div>
                     <div class="col-xl-3 text-center">
-                        <label for="limite"><span>Limite</span><span class="required">*</span><br><input type="date"
-                                name="limite" id="" value="<?php echo $t_edit->limite(); ?>"></label>
+                        <label for="limite"><span>Limite</span><span class="required">*</span><br><input type="date" name="limite" id="" value="<?php echo $t_edit->limite(); ?>"></label>
                     </div>
                     <div class="col-xl-3 text-center">
                         <label for="types"><span>Type</span><span class="required">*</span><br>
                             <select name="types" class="input-form select-field">
-                                <option value="<?php echo $t_edit->types(); ?>">
-                                    <?php echo strtoupper($t_edit->types()); ?></option>
-                                <?php if($t_edit->types() != "etude"){
-                            ?>
-                                <option value="etude">ETUDE</option>
-                                <?php
-                                }
-                                if($t_edit->types() != "general"){
-                            ?>
-                                <option value="general">GENERAL</option>
-                                <?php
-                                }
-                                if($t_edit->types() != "devellopement"){
-                            ?>
-                                <option value="devellopement">DEVELLOPEMENT</option>
-                                <?php }?>
-                            </select></label>
+                                <option value="<?php echo $t_edit->types(); ?>"><?php echo strtoupper($t_edit->types()); ?></option>
+<?php if($t_edit->types() != "etude"){
+?>
+<option value="etude">ETUDE</option>
+<?php
+}
+if($t_edit->types() != "general"){
+?>
+<option value="general">GENERAL</option>
+<?php
+}
+if($t_edit->types() != "devellopement"){
+?>
+<option value="devellopement">DEVELLOPEMENT</option>
+<?php
+}
+?>
+                            </select>
+                        </label>
                     </div>
                 </div>
                 <div class="row mt-5">
@@ -165,25 +163,32 @@ if(isset($_POST['tache_edit']) && isset($_POST['nom']) && isset($_POST['detail']
         // °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
         switch($redirection){
             case "logo":
-            header("Status: 301 Moved Permanently", false, 301);
-            header("Location: http://localhost/todolist/");
-                exit(); 
-            case "etude":
-                header("Status: 301 Moved Permanently", false, 301);
-                header("Location: http://localhost/todolist/?types=etude");
-                    exit();
+?>
+<script>
+document.location.href = "http://localhost/todolist/"
+</script>
+<?php
+break;
+?>
+<script>
+document.location.href = "http://localhost/todolist/?types=etude"
+</script>
+<?php
+break;
             case "general":
-                header("Status: 301 Moved Permanently", false, 301);
-                header("Location: http://localhost/todolist/?types=general");
-                    exit();  
-            case "devellopement":
-                header("Status: 301 Moved Permanently", false, 301);
-                header("Location: http://localhost/todolist/?types=devellopement");
-                    exit(); 
+?>
+<script>
+document.location.href = "http://localhost/todolist/?types=devellopement"
+</script>
+<?php
+break;
             case "date":
-                header("Status: 301 Moved Permanently", false, 301);
-                header("Location: http://localhost/todolist/?date=today ");
-                    exit();
+?>
+<script>
+document.location.href = "http://localhost/todolist/?date=today"
+</script>
+<?php
+break;
 // fin SWITCH redirection
 }  
 }           

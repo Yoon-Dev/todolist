@@ -1,6 +1,15 @@
 <?php
-require_once './entete.php';
 require './extension/instance.php';
+
+if(!isset($_SESSION['code']) || $_SESSION['code'] === false){
+  require './extension/code.php';  
+} 
+if(isset($_SESSION['reload']) && $_SESSION['reload'] == "2"){
+$_SESSION['reload'] = 1;
+header('Location: '.$_SERVER['REQUEST_URI']);  
+}
+if(isset($_SESSION['code']) && $_SESSION['code'] === true){
+require_once './entete.php';
 chargerclass($c_tache);
 chargerclass($c_manager);
 $manager = new ManagerTaches($conn);
@@ -140,7 +149,7 @@ switch (true){
 }
 
 
-if (empty($taches) && empty($_GET['edit_repe']) && empty($_GET['edit']))
+if (empty($taches) || !isset($taches) && empty($_GET['edit_repe']) && empty($_GET['edit']))
 {
 ?>
 <div class="contairer marg-contain">
@@ -157,14 +166,14 @@ if(empty($_GET['edit_repe']) && empty($_GET['edit']))
   if($adresse == "http://localhost/todolist/" ){
 ?>
 <div class="contairer ">
-    <div class="row">
-        <?php
+      <div class="row">
+<?php
   }
   else{
 ?>
-        <div class="contairer marg-contain">
-            <div class="row">
-                <?php
+<div class="contairer marg-contain">
+      <div class="row">
+<?php
   }
   foreach ($taches as $uneTaches)
   {
@@ -175,32 +184,29 @@ if(empty($_GET['edit_repe']) && empty($_GET['edit']))
                         <div class="box-lien">
                             <div class="row">
                                 <div class="col-2 icone-box">
-                                    <?php
+<?php
 if($uneTaches->repe_jour() == null){
   // si c'est une tache simple
 ?>
-                                    <a class="lien_del"
-                                        href="?del=<?=$uneTaches->id();?>&amp;redirection=<?=$redirection_edit;?>"><i class="fas fa-minus"></i></a>
-                                    <?php
+                                  <a class="lien_del" href="?del=<?=$uneTaches->id();?>&amp;redirection=<?=$redirection_edit;?>"><i class="fas fa-minus"></i></a>
+<?php
 }
 if($uneTaches->repe_jour() != null && isset($_GET['repe']) && !empty($_GET['repe'])){
   // si dans le BACKOFFICE
 ?>
                                     <a class="lien_del" href="?sup_repe=<?=$uneTaches->id();?>"><i class="far fa-trash-alt"></i></a>
-                                    <?php
+<?php
 }
 if($uneTaches->repe_jour() != null && !isset($_GET['repe']) && empty($_GET['repe'])){
   // si c'est une tache repe
 ?>
-                                    <a class="lien_del"
-                                        href="?del_repe=<?=$uneTaches->id();?>&amp;redirection=<?=$redirection_edit;?>"><i class="fas fa-minus"></i></a>
-                                    <?php
+                                    <a class="lien_del" href="?del_repe=<?=$uneTaches->id();?>&amp;redirection=<?=$redirection_edit;?>"><i class="fas fa-minus"></i></a>
+<?php
 }
 ?>
                                 </div>
                                 <div class="col-8">
-                                    <h2 class="nom-contenant <?php echo$uneTaches->etat();?>">
-                                        <?php echo$uneTaches->nom();?></h2>
+                                    <h2 class="nom-contenant <?php echo$uneTaches->etat();?>"><?php echo$uneTaches->nom();?></h2>
                                 </div>
                                 <div class="col-2">
                                     <a class="lien_jquery-nom" href=""><i class="fas fa-chevron-up"></i></a>
@@ -208,17 +214,17 @@ if($uneTaches->repe_jour() != null && !isset($_GET['repe']) && empty($_GET['repe
                             </div>
                         </div>
                         <div class="list-info-tache" id="list-info-tache">
-                            <h5><?php echo$uneTaches->detail(); ?></h5>
+                            <h5><?php echo$uneTaches->detail();?></h5>
 <?php
 if($uneTaches->repe_jour() == null){
   // si c'est une tache simple)
 ?>
-                            <h3><?php echo$uneTaches->limite(); ?></h3>
+                            <h3><?php echo$uneTaches->limite();?></h3>
 <?php
 }
 else{
 ?>
-                            <h5><?php echo "repe_jour : ".$uneTaches->repe_jour(); ?></h5>
+                            <h5><?php echo "repe_jour : ".$uneTaches->repe_jour();?></h5>
 <?php
 }
 ?>
@@ -233,14 +239,14 @@ else{
 if($uneTaches->repe_jour() == null){
   // si c'est une tache simple
 ?>
-                                        <a class="lien-edit" href="?edit=<?=$uneTaches->id()?>&amp;redirection=<?=$redirection_edit;?>"><i class="far fa-edit"></i></a>
-                                        <?php
+<a class="lien-edit" href="?edit=<?=$uneTaches->id()?>&amp;redirection=<?=$redirection_edit;?>"><i class="far fa-edit"></i></a>
+<?php
 }
 if($uneTaches->repe_jour() != null && isset($_GET['repe']) && !empty($_GET['repe'])){
   // si c'est une tache repe
 ?>
                                         <a href="?edit_repe=<?=$uneTaches->id();?>"><i class="far fa-edit"></i></a>
-                                        <?php
+<?php
 }
 ?>
                                     </div>
@@ -249,14 +255,15 @@ if($uneTaches->repe_jour() != null && isset($_GET['repe']) && !empty($_GET['repe
                         </div>
                     </div>
                 </div>
-
-                <?php
-  }
+<?php
+}
 }
 ?>
-            </div>
-        </div>
-        <script src="./js/form.js"></script>
+   </div>
+</div>
+        <script type="text/javascript" src="./js/form.js"></script>
         </body>
-
         </html>
+<?php
+}
+?>

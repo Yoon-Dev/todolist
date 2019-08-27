@@ -3,11 +3,21 @@
 /* base */
 
 /* °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°° */
+#body-code{
+    font-family: helvetica, arial;
+    background: url('https://media.giphy.com/media/cpO6VvIo0mW9q/source.gif');
+    background-size: cover;
+}
 
-body {
+body:not(.locked), body:not(.locked-error){
     font-family: helvetica, arial;
     background: url('https://media.giphy.com/media/5kFoXYlmfx8lM9m7Cb/source.gif');
     background-size: cover;
+}
+@media (max-width: 760px) {
+    body:not(.locked), body:not(.locked-error){
+    background-position: center center !important;
+    }
 }
 
 fieldset {
@@ -56,7 +66,8 @@ fieldset {
 .filtre_sencondaire {
     display: flex;
     justify-content: center;
-    padding-left: 0px;
+    padding: 0px;
+    margin: 0px 0px 6px 0px;
 }
 
 .filtre_sencondaire li {
@@ -70,9 +81,10 @@ fieldset {
     background: url('../img/gif/link_hover_gif.gif') 0px 0px;
     background-size: cover;
     background-clip: text;
+    -webkit-background-clip: text;
 }
 
-.navigation_entete li a, .filtre_sencondaire li a:not(.lien-navigation-entente), .lien-select-form {
+.navigation_entete li a, .filtre_sencondaire li a:not(.lien-navigation-entente){
     transition: all .25s cubic-bezier(.47, 0, .74, .71);
     color: white;
     font-family: helvetica, arial;
@@ -81,6 +93,8 @@ fieldset {
     background: url('../img/gif/link_hover_gif.gif') 0px 0px;
     background-size: cover;
     background-clip: text;
+    -webkit-background-clip: text;
+    
 }
 
 .navigation_entete li a:hover, .filtre_sencondaire li a:not(.lien-navigation-entente):hover, .navigation_entete li a:focus, .filtre_sencondaire li a:not(.lien-navigation-entente):focus, .navigation_entete li a:active, .filtre_sencondaire li a:not(.lien-navigation-entente):active {
@@ -91,6 +105,7 @@ fieldset {
     background-size: cover;
     /* border-bottom: 3px solid #1771c04a; */
     background-clip: text;
+    -webkit-background-clip: text;
     border-bottom: 3px solid #07539585;
     color: transparent;
 
@@ -193,6 +208,17 @@ fieldset {
         font-size: 2.4em !important;
     }
 }
+@media (max-width: 575px) {
+    .col-xs-nav {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .margin-nav-res{
+        margin-top: 0.333rem !important;
+        margin-bottom: 0.333rem !important;
+    }
+}
 /* °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°° */
 /* °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°° */
 
@@ -201,5 +227,10 @@ fieldset {
     -ms-transform:rotate(180deg);
     -webkit-transform:rotate(180deg);
     transform : rotate(180deg);
+}
+.locked-error{
+    font-family: helvetica, arial;
+    background: url('https://media.giphy.com/media/EJcfkkBX6Eorm/source.gif') !important;
+    background-size: cover;
 }
 

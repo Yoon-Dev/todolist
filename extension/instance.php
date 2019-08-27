@@ -1,4 +1,8 @@
 <?php
+
+session_start();
+$adresse = "http://" . $_SERVER['SERVER_NAME'] . $_SERVER["REQUEST_URI"];
+$taches;
 // instance qui serve au bon fonctionnement de l'application
 $jour = date("D");
 $today = date("Y-m-d");

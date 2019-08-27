@@ -16,6 +16,29 @@ legend{
 /* °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°° */
 	/* Module */
 /* °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°° */
+/* °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°° */
+/* LIEN SELECT FORM */
+/* °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°° */
+.lien-select-form{
+    margin: 10px;
+    color: #ffffffcf;
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background: url('../img/gif/link_form_gif.gif') 0px 0px;
+}
+.lien-select-form_click{
+    font-size: 1.2em;
+    padding: 10px;
+    font-weight: 700;
+    background: url('../img/gif/link_form_gif.gif') 0px 0px;
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-family: helvetica, arial;
+}
+/* °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°° */
 .form-style label{
     display: block;
     margin: 0px 0px 15px 0px;
@@ -81,6 +104,30 @@ input[type="date"] {
     display: inline-block !important;
     visibility: visible !important;
 }
+/* °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+/* CODE */
+/* °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°° */
+.input-sub{
+    transition: all .15s cubic-bezier(.95,.05,.8,.04);
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border: none;
+    background-color: beige;
+    box-shadow: 0px 2px 0px 2px black;
+}
+.input-code{
+    transition: all .15s cubic-bezier(.95,.05,.8,.04);
+    background-color: transparent;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 3px solid beige;
+    font-size: 2em;
+    letter-spacing: .2em;
+    max-width: 100%;
+    text-align: center;
+}
 /* °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°° */
 	/* State */
 /* °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°° */
@@ -88,17 +135,30 @@ input[type="date"] {
 .form-style input[type=button]:hover{
 	box-shadow: 6px 6px 12px rgba(0,0,0,0.2);
 }
-.lien-select-form{
-    margin: 10px;
-    color: #ffffffcf;
+.input-code-error{
+    transition: all .15s cubic-bezier(.95,.05,.8,.04);
+    background-color: transparent;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 3px solid red;
+    font-size: 2em;
+    letter-spacing: .2em;
+    max-width: 100%;
+    text-align: center;
+    color: yellow;
 }
-.lien-select-form_click{
-    font-size: 1.2em;
+.input-sub-error{
+    transition: all .15s cubic-bezier(.95,.05,.8,.04);
     padding: 10px;
-    font-weight: 700;
-    background: url('../img/gif/link_form_gif.gif') 0px 0px;
-    background-size: cover;
-    background-clip: text;
-    color: transparent;
-    font-family: helvetica, arial;
+    padding-left: 30px;
+    padding-right: 30px;
+    border: none;
+    background-color: red;
+    box-shadow: 0px 2px 0px 2px black;
+
 }
+.input-sub:active, .input-sub:focus{
+    box-shadow: 0px 1px 0px 1px black; 
+}
+
