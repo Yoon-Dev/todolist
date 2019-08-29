@@ -165,27 +165,27 @@ if(isset($_POST['tache_edit']) && isset($_POST['nom']) && isset($_POST['detail']
             case "logo":
 ?>
 <script>
-document.location.href = "http://localhost/todolist/"
+document.location.href = "http://mo-todolist.webou.net/todolist/"
 </script>
 <?php
 break;
 ?>
 <script>
-document.location.href = "http://localhost/todolist/?types=etude"
+document.location.href = "http://mo-todolist.webou.net/todolist/?types=etude"
 </script>
 <?php
 break;
             case "general":
 ?>
 <script>
-document.location.href = "http://localhost/todolist/?types=devellopement"
+document.location.href = "http://mo-todolist.webou.net/todolist/?types=devellopement"
 </script>
 <?php
 break;
             case "date":
 ?>
 <script>
-document.location.href = "http://localhost/todolist/?date=today"
+document.location.href = "http://mo-todolist.webou.net/todolist/?date=today"
 </script>
 <?php
 break;
@@ -200,7 +200,7 @@ $edit = new Taches(['id' => $r_edit->id(), 'nom' => $_POST['nom_repe'], 'detail'
 $manager->editRepe($edit);
 ?>
 <script>
-document.location.href = "http://localhost/todolist/?repe=true"
+document.location.href = "http://mo-todolist.webou.net/todolist/?repe=true"
 </script>
 <?php
     }

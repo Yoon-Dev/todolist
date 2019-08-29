@@ -1,6 +1,4 @@
 <!DOCTYPE html>
-<?php
-?>
 <html lang="en">
 
 <head>
@@ -22,7 +20,7 @@
             <div class="col-12">
                 <ul class="filtre_sencondaire">
                     <li>
-                        <h4><a href="http://localhost/todolist/">TÂCHES</a></h4>
+                        <h4><a href="http://mo-todolist.webou.net/todolist/">TÂCHES</a></h4>
                     </li>
                     <li class="mx-2">
                         <h4><a class="lien-navigation-entente" href="#"><i class="fas fa-arrow-up"></i></a></h4>
@@ -33,23 +31,23 @@
         <ul class="navigation_entete mb-4">
             <div class="row " style="min-width: 100%;">
                 <div class="col-3 col-xs-nav margin-nav-res">
-                    <li><a href="http://localhost/todolist/?types=<?="etude" ?>">étude</a></li>
+                    <li><a href="http://mo-todolist.webou.net/todolist/?types=<?="etude"?>">étude</a></li>
                 </div>
                 <div class="col-3 col-xs-nav margin-nav-res">
-                    <li><a href="http://localhost/todolist/?types=<?="general" ?>">général</a></li>
+                    <li><a href="http://mo-todolist.webou.net/todolist/?types=<?="general"?>">général</a></li>
                 </div>
                 <div class="col-3 col-xs-nav margin-nav-res">
-                    <li><a href="http://localhost/todolist/?types=<?="devellopement" ?>">développement</a></li>
+                    <li><a href="http://mo-todolist.webou.net/todolist/?types=<?="devellopement"?>">développement</a></li>
                 </div>
                 <div class="col-3 col-xs-nav margin-nav-res">
-                    <li><a href="http://localhost/todolist/?repe=<?="true" ?>">backoffice</a></li>
+                    <li><a href="http://mo-todolist.webou.net/todolist/?repe=<?="true"?>">backoffice</a></li>
                 </div>
             </div>
         </ul>
         <div class="row">
             <div class="col-12">
                 <h1 class="today-logo">
-                <a href="http://localhost/todolist/?date=<?="today" ?>"><?php echo date("m-d"); ?></a></h1>
+                <a href="http://mo-todolist.webou.net/todolist/?date=<?="today"?>"><?php echo date("m-d"); ?></a></h1>
             </div>
         </div>
     </div>

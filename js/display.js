@@ -39,6 +39,7 @@ $(".lien_jquery-nom").click(function (ev) {
 // °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
 // SCROLL DOWN
 // °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+// PREND BEAUCOUP TROP DE TEMPS
 (function () {
     var previousScroll = 0;
     $(window).scroll(function(){

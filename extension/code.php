@@ -52,11 +52,9 @@ $('#body-code').addClass('locked-error');
 // $('.locked').css({"background": "url('https://media.giphy.com/media/9WC8WTZsFxkRi/giphy.gif')",
 //                     "background-size": "cover",
 //                     "background-position": "contain center"});
-   
 </script>
 <?php
 }
 }
 ?>
-
 </html>

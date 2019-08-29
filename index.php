@@ -6,7 +6,11 @@ if(!isset($_SESSION['code']) || $_SESSION['code'] === false){
 } 
 if(isset($_SESSION['reload']) && $_SESSION['reload'] == "2"){
 $_SESSION['reload'] = 1;
-header('Location: '.$_SERVER['REQUEST_URI']);  
+?>
+<script>
+document.location.href = "http://mo-todolist.webou.net/todolist/"
+</script>
+<?php
 }
 if(isset($_SESSION['code']) && $_SESSION['code'] === true){
 require_once './entete.php';
@@ -18,7 +22,7 @@ $manager->RetardSimple($today);
 switch (true){
 // °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
 // affiche le form add + all(tache_simple).today(tache_repe)
-    case $adresse == "http://localhost/todolist/":
+    case $adresse == "http://mo-todolist.webou.net/todolist/":
     // variable de redirection sur un edit de tache simple
     $redirection_edit = "logo";
     // °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
@@ -83,28 +87,42 @@ switch (true){
     $manager->del($tache_del);
     switch($redirection){
       case "logo":
-      header("Status: 301 Moved Permanently", false, 301);
-      header("Location: http://localhost/todolist/");
-          exit(); 
+?>
+<script>
+document.location.href = "http://mo-todolist.webou.net/todolist/"
+</script>
+<?php
+break;
       case "etude":
-          header("Status: 301 Moved Permanently", false, 301);
-          header("Location: http://localhost/todolist/?types=etude");
-              exit();
+?>
+<script>
+document.location.href = "http://mo-todolist.webou.net/todolist/?types=etude"
+</script>
+<?php
+break;
       case "general":
-          header("Status: 301 Moved Permanently", false, 301);
-          header("Location: http://localhost/todolist/?types=general");
-              exit();  
+?>
+<script>
+document.location.href = "http://mo-todolist.webou.net/todolist/?types=general"
+</script>
+<?php
+break; 
       case "devellopement":
-          header("Status: 301 Moved Permanently", false, 301);
-          header("Location: http://localhost/todolist/?types=devellopement");
-              exit(); 
+?>
+<script>
+document.location.href = "http://mo-todolist.webou.net/todolist/?types=devellopement"
+</script>
+<?php
+break; 
       case "date":
-          header("Status: 301 Moved Permanently", false, 301);
-          header("Location: http://localhost/todolist/?date=today ");
-              exit();
+?>
+<script>
+document.location.href = "http://mo-todolist.webou.net/todolist/?date=today"
+</script>
+<?php
+break; 
 // fin SWITCH redirection
 }
-
           break;
 // °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
 // ajoute +1 a etat_repe (del repe)
@@ -114,13 +132,19 @@ switch (true){
     $manager->delrepe($tache_repe);
     switch($redirection){
       case "logo":
-      header("Status: 301 Moved Permanently", false, 301);
-      header("Location: http://localhost/todolist/");
-          exit(); 
+?>
+<script>
+document.location.href = "http://mo-todolist.webou.net/todolist/"
+</script>
+<?php
+break;
       case "date":
-          header("Status: 301 Moved Permanently", false, 301);
-          header("Location: http://localhost/todolist/?date=today ");
-              exit();
+?>
+<script>
+document.location.href = "http://mo-todolist.webou.net/todolist/?date=today"
+</script>
+<?php
+break; 
 // fin SWITCH redirection
 }
           break;
@@ -142,14 +166,16 @@ switch (true){
     case isset($_GET['sup_repe']) && !empty($_GET['sup_repe']): 
     $repe_sup = (int)$_GET['sup_repe'];
     $manager->supRepe($repe_sup);
-    header("Status: 301 Moved Permanently", false, 301);
-    header("Location: http://localhost/todolist/?repe=true");
-        exit();
+?>
+<script>
+document.location.href = "http://mo-todolist.webou.net/todolist/?repe=true"
+</script>
+<?php
         break;
 }
 
 
-if (empty($taches) || !isset($taches) && empty($_GET['edit_repe']) && empty($_GET['edit']))
+if (empty($taches) && empty($_GET['edit_repe']) && empty($_GET['edit']) || !isset($taches) && empty($_GET['edit_repe']) && empty($_GET['edit']))
 {
 ?>
 <div class="contairer marg-contain">
@@ -163,7 +189,7 @@ if (empty($taches) || !isset($taches) && empty($_GET['edit_repe']) && empty($_GE
 }
 if(empty($_GET['edit_repe']) && empty($_GET['edit']))
 {
-  if($adresse == "http://localhost/todolist/" ){
+  if($adresse == "http://mo-todolist.webou.net/todolist/"){
 ?>
 <div class="contairer ">
       <div class="row">

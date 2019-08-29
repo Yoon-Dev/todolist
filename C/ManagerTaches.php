@@ -31,7 +31,7 @@ class ManagerTaches{
     }
     }
 // °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
-    public function InitRepe(string $jour){
+    public function InitRepe($jour){
         // Initialise les REPE qui ne sont pas en retard
         $q = $this->_conn->prepare('UPDATE `tache` SET etat_repe = 1 WHERE repe_jour != :jour AND etat_repe = 2 AND repe_confirme = 1');
         $q->execute([':jour' => $jour]);
