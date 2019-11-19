@@ -1,0 +1,24 @@
+.bg{
+    min-height: 100vh;
+    min-width: 100vh;
+}
+.bg-vacance{
+    background: url('https://media.giphy.com/media/5ocAtoAPhIDcI/source.gif'); 
+}
+.bg-redirect{
+    background: url('https://media.giphy.com/media/EIRNuZ1p9TI3u/source.gif') ;
+    background-size: cover;
+}
+.link-wrong{
+    position: absolute;
+    left: 40%;
+    top: 50vh;
+    color: white;
+    font-size: 1.3em;
+}
+@media(min-width: 768px){
+    .link-wrong{font-size: 3.5em;}
+}
+.link-wrong:hover{
+    border-bottom: aliceblue 3px solid;
+}
