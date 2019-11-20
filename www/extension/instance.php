@@ -8,7 +8,7 @@ $today = date("Y-m-d");
 $c_tache = "Taches";
 $c_user = "User";
 $c_manager = "ManagerTaches";
-$conn = new PDO('mysql:host=pierremogkbdd.mysql.db;dbname=pierremogkbdd', 'pierremogkbdd', 'beM38X7dN');
+$conn = new PDO('mysql:host=serveur;dbname=db-name', 'username', 'top-secret');
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING); // On émet une alerte à chaque fois qu'une requête a échouéconn
 function chargerclass($classname){
     if($classname == "ManagerTaches" || $classname == "Taches"){
