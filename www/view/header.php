@@ -11,8 +11,7 @@
     <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" href="./bootstrap-4.3.0-dist/css/bootstrap-grid.css">
-    <link rel="stylesheet" href="./bootstrap-4.3.0-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/form.css">
     <link rel="stylesheet" href="./css/extension.css">

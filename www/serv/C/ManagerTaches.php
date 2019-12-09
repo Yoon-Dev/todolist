@@ -11,8 +11,9 @@ class ManagerTaches{
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // fonctionnalité
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    public function RetardSimple($today){
-        // Marque les tache simple en retard
+    public function RetardSimple($today)
+    {
+    // Marque les tache simple en retard
         $today = str_split ($today, 1);
         $today = $today[0].$today[1].$today[2].$today[3].$today[5].$today[6].$today[8].$today[9];
         $today = intval($today);
@@ -35,8 +36,9 @@ class ManagerTaches{
     }
     }
 // °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
-    public function InitRepe($jour){
-        // Initialise les REPE qui ne sont pas en retard
+    public function InitRepe($jour)
+    {
+    // Initialise les REPE qui ne sont pas en retard
         $q = $this->_conn->prepare('UPDATE `tache` SET etat_repe = 1 WHERE repe_jour != :jour AND etat_repe = 2 AND repe_confirme = 1');
         $q->execute([':jour' => $jour]);
     }
@@ -202,6 +204,15 @@ class ManagerTaches{
         $data = $q->fetch(PDO::FETCH_ASSOC);
 
         return $data['state'];
+    }
+    public function notEmpty(string $empty)
+    {
+        if($empty != 'true'){
+            return true;
+        }else{
+            return false;
+        }
+
     }
 
     
