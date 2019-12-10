@@ -25,7 +25,7 @@ $(".lien_jquery-nom").click(function (ev) {
         $(this).addClass("rotation-lien")
   
     }
-    // affiche les ingredient
+    // affiche les details
         var parent_1 = $(this).parent('.col-2');
         var parent_2 = parent_1.parent('.row');
         var parent_3 = parent_2.parent('.box-lien');

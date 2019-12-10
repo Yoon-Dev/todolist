@@ -55,6 +55,17 @@ class Taches{
             }
 
         }
+        public function isToday()
+        {
+        // Test si la tache est à faire aujourd'hui
+            $today = date("m-d");
+            $jour = date("D");
+            if($this->limite() === $today || $this->repe_jour() === $jour){
+                return "yes";
+            }else{
+                return "nope";
+            }
+        }
 // °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
     // GETTER
 // °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°

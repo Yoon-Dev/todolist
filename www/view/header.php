@@ -15,10 +15,6 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/form.css">
     <link rel="stylesheet" href="./css/extension.css">
-    <script type="text/javascript" src="./js/plugin/jquery/jquery-3.4.0.js"></script>
-    <script type="text/javascript" src="./js/display.js"></script>
-    <script type="text/javascript" src="./js/form.js"></script>
-    <script type="text/javascript" src="./js/dysplay-add-form"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
     
 <title>TODOLIST</title>
@@ -51,20 +47,20 @@ function hideLoader(){
         <ul class="navigation_entete mb-4">
             <div class="ml-0 row justify-content-md-center" style="min-width: 100%;">
                 <div class="col-4  margin-nav-res">
-                    <li><a href="./?types=<?="etude"?>">etu</a></li>
+                    <li><a class="filter" data-filtre="etude" href="#">etu</a></li>
                 </div>
                 <div class="col-4 margin-nav-res">
-                    <li><a href="./?types=<?="general"?>">général</a></li>
+                    <li><a class="filter" data-filtre="general" href="#">général</a></li>
                 </div>
                 <div class="col-4  margin-nav-res">
-                    <li><a href="./?types=<?="devellopement"?>">dev</a></li>
+                    <li><a class="filter" data-filtre="developpement"href="#">dev</a></li>
                 </div>
             </div>
         </ul>
         <div class="row">
             <div class="col-12">
                 <h1 class="today-logo">
-                <a href="./?date=<?="today"?>"><?php echo date("m-d"); ?></a></h1>
+                <a class="istoday" href="#"><?php echo date("m-d"); ?></a></h1>
             </div>
         </div>
     </div>
