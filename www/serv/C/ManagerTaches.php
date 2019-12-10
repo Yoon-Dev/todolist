@@ -88,17 +88,21 @@ class ManagerTaches{
         $q->execute();    
     }
 // °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
-// supprime une tache simple
-    public function del($tache_del){
+
+    public function del(int $id)
+    {
+    // supprime une tache simple
         $q = $this->_conn->prepare('DELETE FROM `tache` WHERE id = :id');
-        $q->execute(['id' => $tache_del]);
+        $q->execute(['id' => $id]);
     }
 // °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
 // °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+
+    public function delRepe(int $id)
+    {
     // Supprime pour de faut une tache repe
-    public function delrepe($tache_repe){
         $q = $this->_conn->prepare('UPDATE `tache` SET etat_repe = 2 WHERE id = :id');
-        $q->execute(['id' => $tache_repe]);
+        $q->execute(['id' => $id]);
     }
 // °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
     // Supprime !!VRAIMENT!! une REPE

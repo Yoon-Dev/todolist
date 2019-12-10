@@ -25,6 +25,11 @@ $(document).ready(function(){
         });    
     })
 
+    $( "a.home" ).click(function(ev){
+        ev.preventDefault;
+        $( "div.tache" ).show();    
+    })
+
 
 
 });

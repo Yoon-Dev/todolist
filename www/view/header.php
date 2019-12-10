@@ -12,6 +12,8 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+    <!-- tmp -->
+    <link rel="stylesheet" href="./css/tmp.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/form.css">
     <link rel="stylesheet" href="./css/extension.css">
@@ -36,7 +38,7 @@ function hideLoader(){
             <div class="col-12">
                 <ul class="filtre_sencondaire">
                     <li>
-                        <h4><a href="./">TÂCHES</a></h4>
+                        <h4><a class="home" href="#">TÂCHES</a></h4>
                     </li>
                     <li class="mx-2">
                         <h4><a class="lien-navigation-entente" href="#"><i class="fas fa-arrow-up"></i></a></h4>
