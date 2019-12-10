@@ -30,7 +30,7 @@ function hideLoader(){
 </script>
 
 
-<body onload="hideLoader()">
+<body onload="hideLoader()" data-master="list">
 <img id="loader" src="./SVG-Loaders-master/svg-loaders/puff.svg" alt="loader">
 <div id="content" style ="display: none;">
     <div class="container-fluid text-center header-nav">

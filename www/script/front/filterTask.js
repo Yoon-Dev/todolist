@@ -1,7 +1,8 @@
 $(document).ready(function(){
 
     $( "a.filter" ).click(function(ev){
-        ev.preventDefault;
+        ev.preventDefault();
+        ev.stopPropagation();
         var filtre = $(this).attr('data-filtre');
         $( "div.tache" ).each(function() {
             if($(this).is(":visible")){
@@ -14,7 +15,8 @@ $(document).ready(function(){
     })
 
     $( "a.istoday" ).click(function(ev){
-        ev.preventDefault;
+        ev.preventDefault();
+        ev.stopPropagation();
         $( "div.tache" ).each(function(){
             if($(this).is(":visible")){
                 $(this).hide()
@@ -26,7 +28,8 @@ $(document).ready(function(){
     })
 
     $( "a.home" ).click(function(ev){
-        ev.preventDefault;
+        ev.preventDefault();
+        ev.stopPropagation();
         $( "div.tache" ).show();    
     })
 

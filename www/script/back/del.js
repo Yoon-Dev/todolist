@@ -1,7 +1,8 @@
 $(document).ready(function(){
 
     $( "a.del" ).click(function(ev){
-        ev.preventDefautl;
+        ev.preventDefault();
+        ev.stopPropagation();
 
         var id = $(this).attr('data-id');
         var is_simple = $(this).attr('data-simple');

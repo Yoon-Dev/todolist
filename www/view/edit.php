@@ -1,7 +1,7 @@
 <div class="container text-center marg-contain">
     <div class="row">
         <div class="col-12 d-flex justify-content end">
-            <a class="test" href="#"><span>TEST</span></a>
+            <a class="list" href="#"><span>TEST</span></a>
         </div>
         <div class="col-12 form-style">
             <form action="" method="post">
