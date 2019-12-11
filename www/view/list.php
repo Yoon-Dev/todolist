@@ -29,7 +29,12 @@
                     <div class="row">
                         <div class="col-12 text-center">
 <?php if($tache->IamSimple()){ ?>
-                          <a class="edit" href="#"><i class="far fa-edit"></i></a>
+                          <a class="edit" href="#"
+                          data-nom="<?php echo$tache->nom();?>"
+                          data-detail="<?php echo$tache->detail();?>"
+                          data-type="<?php echo$tache->types();?>"
+                          data-date="<?php echo$tache->u_limite();?>"
+                          ><i class="far fa-edit"></i></a>
 <?php } ?>
                         </div>
                     </div>

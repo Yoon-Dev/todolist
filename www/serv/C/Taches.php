@@ -7,6 +7,7 @@ class Taches{
                 $_nom,
                 $_detail,
                 $_limite,
+                $_u_limite,
                 $_types,
                 $_etat,
                 $_etat_repe,
@@ -17,6 +18,7 @@ class Taches{
 // °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
     public function __construct(Array $data){
         $this->hydrate($data);
+        $this->setU_limite($this->limite());
         $this->SweetLimite();
     }
 // °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
@@ -73,6 +75,7 @@ class Taches{
     public function nom(){return$this->_nom;}
     public function detail(){return$this->_detail;}
     public function limite(){return$this->_limite;}
+    public function u_limite(){return$this->_u_limite;}
     public function types(){return$this->_types;}
     public function etat(){return$this->_etat;}
     public function etat_repe(){return$this->_etat_repe;}
@@ -85,6 +88,7 @@ class Taches{
     public function setNom($nom){if(is_string($nom)){$this->_nom = $nom;}}
     public function setDetail($detail){if(!empty($detail) && is_string($detail)){$this->_detail = $detail;}}
     public function setLimite($limite){if(!empty($limite) && is_string($limite)){$this->_limite = $limite;}}
+    public function setU_limite($u_limite){if(!empty($u_limite) && is_string($u_limite)){$this->_u_limite = $u_limite;}}
     public function setTypes($types){if(is_string($types)){$this->_types = $types;}}
     public function setEtat($etat){if(is_string($etat)){$this->_etat = $etat;}}
     public function setEtat_repe($etat_repe){if(!empty($etat_repe) && is_int($etat_repe)){$this->_etat_repe = $etat_repe;}}

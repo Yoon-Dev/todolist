@@ -18,10 +18,9 @@
 
 <!-- New script front-->
 <script type="text/javascript" src="./script/front/route.js"></script>  
-<script type="text/javascript" src="./script/front/filterTask.js"></script>  
+<script type="text/javascript" src="./script/front/filterTask.js"></script> 
+<script type="text/javascript" src="./script/front/edit.js"></script> 
 <!-- New script back-->
-<script type="text/javascript" src="./script/back/del.js"></script> 
-
-<script type="text/javascript" src="./script/back/edit.js"></script> 
+<script type="text/javascript" src="./script/back/del.js"></script>  
 </body>
 </html>
