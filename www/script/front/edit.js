@@ -4,12 +4,16 @@ $(document).ready(function(){
     $( "a.edit" ).click(function(ev){
         ev.preventDefault();
         ev.stopPropagation();
+
         DelOption();
+
+        var id = $(this).attr('data-id');
         var nom = $(this).attr('data-nom');
         var detail = $(this).attr('data-detail');
         var type = $(this).attr('data-type');
         var date = $(this).attr('data-date');
-        // console.log(nom, detail, type, date, typeof(nom), typeof(detail), typeof(type), typeof(date));
+
+        $( "input[name=id]" ).val(id);
         $( "input[name=nom]" ).val(nom);
         $( "textarea[name=detail]" ).val(detail);
         var date_obj = new Date(date);
@@ -22,6 +26,7 @@ $(document).ready(function(){
     {
         $( "select[name=types] option" ).remove();
     }
+
     function TypeOption(type)
     {
         if(type === "etude"){

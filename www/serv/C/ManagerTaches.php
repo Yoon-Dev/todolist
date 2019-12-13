@@ -66,13 +66,13 @@ class ManagerTaches{
         
     }
 // °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
-    public function editTachesimple(Taches $edit){
+    public function edit(Taches $edit){
 // EDIT une tache simple
         $q = $this->_conn->prepare('UPDATE `tache`SET nom = :nom, detail = :detail, limite = :limite, types = :types WHERE id = :id');
         $q->bindValue(':id', $edit->id());
         $q->bindValue(':nom', $edit->nom());
         $q->bindValue(':detail', $edit->detail());
-        $q->bindValue(':limite', $edit->limite());
+        $q->bindValue(':limite', $edit->u_limite());
         $q->bindValue(':types', $edit->types());
         $q->execute();
     }

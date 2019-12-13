@@ -7,7 +7,7 @@
             <div class="box-lien">
                 <div class="row">
                     <div class="col-2 icone-box">
-                      <a class="del" href="#" data-id="<?php echo$tache->id();?>" data-simple="<?php echo$tache->IamSimple();?>"><i class="fas fa-minus"></i></a>
+                      <a class="del" href="#" data-id="<?php echo$tache->id();?>" data-simple="<?php echo$tache->IamSimple();?>"><i class="fas fa-minus"></i>D</a>
                     </div>
                     <div class="col-8">
                         <h2 class="nom-contenant <?php echo$tache->etat();?>"><?php echo$tache->nom();?></h2>
@@ -30,11 +30,12 @@
                         <div class="col-12 text-center">
 <?php if($tache->IamSimple()){ ?>
                           <a class="edit" href="#"
+                          data-id="<?php echo$tache->id();?>"
                           data-nom="<?php echo$tache->nom();?>"
                           data-detail="<?php echo$tache->detail();?>"
                           data-type="<?php echo$tache->types();?>"
                           data-date="<?php echo$tache->u_limite();?>"
-                          ><i class="far fa-edit"></i></a>
+                          ><i class="far fa-edit"></i>E</a>
 <?php } ?>
                         </div>
                     </div>

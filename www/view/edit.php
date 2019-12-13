@@ -4,7 +4,7 @@
             <a class="list" href="#"><span>TEST</span></a>
         </div>
         <div class="col-12 form-style">
-            <form action="" method="post">
+            <form>
                 <fieldset>
                     <a class="lien-select-form lien-select-form_click" href="#repe">EDIT</a>
                     <div class="row">
@@ -23,10 +23,11 @@
                                 </select>
                             </label>
                         </div>
+                        <input type="hidden" name="id" value="">
                     </div>
                     <div class="row mt-5">
                         <div class="col-xl-12 text-center">
-                            <label for="tache_edit"><input type="submit" value="submit" name="tache_edit"></label>
+                            <label for="tache_edit"><input id="sub-btn" type="submit" value="submit" name="tache_edit"></label>
                         </div>
                     </div>
                 </fieldset>
