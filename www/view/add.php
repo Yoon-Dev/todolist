@@ -1,10 +1,11 @@
-
-    <div class="text-center marg-contain">
+<div class="container text-center marg-contain">
+    <div class="row">
+        <div class="col-12 d-flex justify-content end">
+            <a class="list" href="#"><span>TEST</span></a>
+        </div>
         <div class="col-12">
-            <!-- CHOIX du formulaire -->
             <fieldset>
                 <br>
-                <!-- lien de choix de formulaire -->
                 <a class="lien-select-form" href="#tache" id="lien_tache_simple">tache</a>
             </fieldset>
         </div>
@@ -35,26 +36,12 @@
                         </div>
                         <div class="row mt-5">
                             <div class="col-xl-12 text-center">
-                                <label for="tache_simple"><input type="submit" value="submit" name="tache_simple" alt="sub"></label>
+                                <label for="tache_simple"><input id="sub-btn" type="submit" value="submit" name="tache_simple" alt="sub"></label>
                             </div>
                         </div>
                     </fieldset>
                 </form>
             </div>
         </div>
-    <?php
-// °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
-    // insertion TACHE SIMPLE
-// °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
-// echo "nom : ".$_POST['nom']." detail : ".$_POST['detail']." limite : ".$_POST['limite']." types : ".$_POST['types']." sub : ";
-// back ajouter une tache
-if(isset($_POST['tache_simple']) && isset($_POST['nom']) && isset($_POST['detail']) && isset($_POST['limite']) && isset($_POST['types'])){
-
-    if(!empty($_POST['nom'])){
-
-    $tache = new Taches(['nom' => $_POST['nom'], 'detail' => $_POST['detail'], 'limite' => $_POST['limite'], 'types' => $_POST['types']]);
-    }
-
-    $manager->addTachesimple($tache);
-}
-?>
+    </div>
+</div>

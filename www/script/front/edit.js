@@ -13,9 +13,9 @@ $(document).ready(function(){
         var type = $(this).attr('data-type');
         var date = $(this).attr('data-date');
 
-        $( "input[name=id]" ).val(id);
-        $( "input[name=nom]" ).val(nom);
-        $( "textarea[name=detail]" ).val(detail);
+        $( "div#edit input[name=id]" ).val(id);
+        $( "div#edit input[name=nom]" ).val(nom);
+        $( "div#edit textarea[name=detail]" ).val(detail);
         var date_obj = new Date(date);
         document.getElementById("date").valueAsDate = date_obj;
         TypeOption(type);
@@ -24,7 +24,7 @@ $(document).ready(function(){
 
     function DelOption()
     {
-        $( "select[name=types] option" ).remove();
+        $( "div#edit select[name=types]#edit option" ).remove();
     }
 
     function TypeOption(type)
@@ -36,7 +36,7 @@ $(document).ready(function(){
             <option value="general">GENERAL</option>
             <option value="devellopement">DEVELLOPEMENT</option>
             `;
-            $( "select[name=types]" ).append(option);
+            $( "div#edit select[name=types]#edit" ).append(option);
         }
         if(type === "general"){
             option =
@@ -45,7 +45,7 @@ $(document).ready(function(){
             <option value="etude">ETUDE</option>
             <option value="devellopement">DEVELLOPEMENT</option>
             `;
-            $( "select[name=types]" ).append(option);
+            $( "div#edit select[name=types]#edit" ).append(option);
         }
         if(type === "devellopement"){
             option =
@@ -54,7 +54,7 @@ $(document).ready(function(){
             <option value="general">GENERAL</option>
             <option value="etude">ETUDE</option>
             `;
-            $( "select[name=types]" ).append(option);       
+            $( "div#edit select[name=types]#edit" ).append(option);       
         }
     }
 })

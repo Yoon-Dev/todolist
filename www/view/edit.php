@@ -19,7 +19,7 @@
                         </div>
                         <div class="col-xl-3 text-center">
                             <label for="types"><span>Type</span><span class="required">*</span><br>
-                                <select name="types" class="input-form select-field">
+                                <select id="edit" name="types" class="input-form select-field">
                                 </select>
                             </label>
                         </div>

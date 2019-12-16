@@ -7,7 +7,7 @@
             <div class="box-lien">
                 <div class="row">
                     <div class="col-2 icone-box">
-                      <a class="del" href="#" data-id="<?php echo$tache->id();?>" data-simple="<?php echo$tache->IamSimple();?>"><i class="fas fa-minus"></i>D</a>
+                      <a class="del" href="#" data-id="<?php echo$tache->id();?>" data-simple="<?php echo$tache->IamSimple();?>" data-backoffice="non"><i class="fas fa-minus"></i>D</a>
                     </div>
                     <div class="col-8">
                         <h2 class="nom-contenant <?php echo$tache->etat();?>"><?php echo$tache->nom();?></h2>
@@ -44,5 +44,8 @@
         </div>
     </div>
 <?php }} ?>
+  </div>
+  <div class="col-12">
+    <a class="add" href="#">Add</a>
   </div>
 </div>

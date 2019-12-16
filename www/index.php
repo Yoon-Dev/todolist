@@ -5,6 +5,15 @@
 <div id="edit" class="page">
     <?php require './view/edit.php';?>
 </div>
+<div id="add" class="page">
+    <?php require './view/add.php';?>
+</div>
+<div id="backoffice" class="page">
+    <?php require './view/backoffice.php';?>
+</div>
+<div id="add_repe" class="page">
+    <?php require './view/add_repe.php';?>
+</div>
 
 
 
@@ -22,7 +31,10 @@
 <script type="text/javascript" src="./script/front/edit.js"></script> 
 <!-- New script back-->
 <script type="text/javascript" src="./script/back/b-del.js"></script>  
-<script type="text/javascript" src="./script/back/b-edit.js"></script>  
+<script type="text/javascript" src="./script/back/b-edit.js"></script>
+<script type="text/javascript" src="./script/back/b-add.js"></script>   
+<script type="text/javascript" src="./script/back/b-add_repe.js"></script>   
+
 
 </body>
 </html>

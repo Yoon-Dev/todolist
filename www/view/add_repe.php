@@ -1,4 +1,4 @@
-<div class="container text-center marg-contain" id="form_repe">
+<div class="container text-center marg-contain">
     <div class="row">
         <div class="col-12">
             <!-- CHOIX du formulaire -->
@@ -45,7 +45,7 @@
                         </div>
                         <div class="row mt-5">
                             <div class="col-12 text-center">
-                                <label for="tache_repe"><input type="submit" name="tache_repe" value="submit"></label>
+                                <label for="tache_repe"><input id="sub-btn" type="submit" name="tache_repe" value="submit"></label>
                             </div>
                         </div>
                     </fieldset>
@@ -54,22 +54,3 @@
         </div>
     </div>
 </div>
-<?php
-// °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
-    // insertion TACHE REPE
-// °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
-if(isset($_POST['tache_repe']) && isset($_POST['nom_repe']) && isset($_POST['detail_repe'])  && isset($_POST['types_repe']) && isset($_POST['repe_jour'])){
-
-    if(!empty($_POST['nom_repe'])){
-
-    $tache = new Taches(['nom' => $_POST['nom_repe'], 'detail' => $_POST['detail_repe'], 'types' => $_POST['types_repe'], 'repe_jour' => $_POST['repe_jour']]);
-    }
-
-    $manager->addTachesrepe($tache);
-?>
-<script>
-document.location.href = "./backoffice.php"
-</script>
-<?php
-}
-?>

@@ -43,12 +43,12 @@ class ManagerTaches{
         $q->execute([':jour' => $jour]);
     }
 // °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
-    public function addTachesimple(Taches $tache){
+    public function add(Taches $tache){
         // ajoute une tache simple dans la bdd
         $q = $this->_conn->prepare('INSERT INTO tache(nom, detail, limite, types, etat, etat_repe, repe_jour, repe_confirme) VALUES(:nom, :detail, :limite, :types, "bon", NULL, NULL, NULL)');
         $q->bindValue(':nom', $tache->nom());
         $q->bindValue(':detail', $tache->detail());
-        $q->bindValue(':limite', $tache->limite());
+        $q->bindValue(':limite', $tache->u_limite());
         $q->bindValue(':types', $tache->types());
         $q->execute();
         

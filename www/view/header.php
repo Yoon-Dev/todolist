@@ -38,7 +38,7 @@ function hideLoader(){
             <div class="col-12">
                 <ul class="filtre_sencondaire">
                     <li>
-                        <h4><a class="home" href="#">TÂCHES</a></h4>
+                        <h4><a class="home list" href="#">TÂCHES</a></h4>
                     </li>
                     <li class="mx-2">
                         <h4><a class="lien-navigation-entente" href="#"><i class="fas fa-arrow-up"></i></a></h4>
@@ -56,6 +56,9 @@ function hideLoader(){
                 </div>
                 <div class="col-4  margin-nav-res">
                     <li><a class="filter" data-filtre="developpement"href="#">dev</a></li>
+                </div>
+                <div class="col-4  margin-nav-res">
+                    <li><a class="backoffice" data-filtre="developpement"href="#">backoffice</a></li>
                 </div>
             </div>
         </ul>
