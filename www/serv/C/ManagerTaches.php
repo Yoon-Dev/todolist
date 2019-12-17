@@ -54,7 +54,7 @@ class ManagerTaches{
         
     }
 // °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
-    public function addTachesrepe(Taches $tache){
+    public function addRepe(Taches $tache){
         // ajoute une tache REPE dans la bdd
         $q = $this->_conn->prepare('INSERT INTO tache(nom, detail, limite, types, etat, etat_repe, repe_jour, repe_confirme) VALUES(:nom, :detail, NULL, :types, "bon", 1, :repe_jour, 1)');
         $q->bindValue(':nom', $tache->nom());

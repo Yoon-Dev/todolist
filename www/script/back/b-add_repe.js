@@ -11,10 +11,10 @@ $(document).ready(function(){
 
         console.log(nom_repe, detail_repe, type_repe, repe_jour);
         
-        // $.get( "./serv/src/b-add.php", {nom: nom, detail: detail, limite: limite, type: type }, function(){
-        //     $( ".page" ).hide();
-        //     $( ".header-nav" ).show();
-        //     $( "#list" ).show();
-        // } );
+        $.get( "./serv/src/b-add_repe.php", {nom_repe: nom_repe, detail_repe: detail_repe, repe_jour: repe_jour, type_repe: type_repe }, function(){
+            $( ".page" ).hide();
+            $( ".header-nav" ).show();
+            $( "#backoffice" ).show();
+        } );
     })
 })
