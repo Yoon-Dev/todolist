@@ -24,12 +24,12 @@
                 <div class="box-lien">
                     <div class="row">
                         <div class="col-12 text-center">
-                          <a class="edit" href="#"
+                          <a class="edit_repe" href="#"
                           data-id="<?php echo$tache->id();?>"
                           data-nom="<?php echo$tache->nom();?>"
                           data-detail="<?php echo$tache->detail();?>"
                           data-type="<?php echo$tache->types();?>"
-                          data-date="<?php echo$tache->repe_jour();?>"
+                          data-jour="<?php echo$tache->repe_jour();?>"
                           ><i class="far fa-edit"></i>E</a>
                         </div>
                     </div>

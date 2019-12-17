@@ -14,7 +14,9 @@
 <div id="add_repe" class="page">
     <?php require './view/add_repe.php';?>
 </div>
-
+<div id="edit_repe" class="page">
+    <?php require './view/edit_repe.php';?>
+</div>
 
 
 
@@ -29,9 +31,11 @@
 <script type="text/javascript" src="./script/front/route.js"></script>  
 <script type="text/javascript" src="./script/front/filterTask.js"></script> 
 <script type="text/javascript" src="./script/front/edit.js"></script> 
+<script type="text/javascript" src="./script/front/edit_repe.js"></script>
 <!-- New script back-->
 <script type="text/javascript" src="./script/back/b-del.js"></script>  
 <script type="text/javascript" src="./script/back/b-edit.js"></script>
+<script type="text/javascript" src="./script/back/b-edit_repe.js"></script>
 <script type="text/javascript" src="./script/back/b-add.js"></script>   
 <script type="text/javascript" src="./script/back/b-add_repe.js"></script>   
 

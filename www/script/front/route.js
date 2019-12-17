@@ -55,5 +55,15 @@ $( "#list" ).show();
             $( "#add_repe" ).show();    
         })
 
+        // on a.edit_repe click
+        $( "a.edit_repe" ).click(function(ev){
+            ev.preventDefault();
+            ev.stopPropagation();
+            
+            $( ".page" ).hide();
+            $( ".header-nav" ).hide();
+            $( "#edit_repe" ).show();    
+        })
+
     }
 })
