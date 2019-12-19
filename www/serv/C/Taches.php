@@ -16,7 +16,8 @@ class Taches{
 // °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
     // CONSTRUCT
 // °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
-    public function __construct(Array $data){
+    public function __construct(Array $data)
+    {
         $this->hydrate($data);
         $this->setU_limite($this->limite());
         $this->SweetLimite();
@@ -95,7 +96,7 @@ class Taches{
     public function setRepe_jour($repe_jour){if(!empty($repe_jour) && is_string($repe_jour)){$this->_repe_jour = $repe_jour;}}
     public function setRepe_confirme($repe_confirme){if(!empty($repe_confirme) && is_int($repe_confirme)){$this->_repe_confirme = $repe_confirme;}}
 // °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
-// fin CLASSE
+// end
 }
 
 ?>

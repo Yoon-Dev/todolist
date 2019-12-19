@@ -1,7 +1,7 @@
 <div class="container text-center marg-contain">
     <div class="row">
         <div class="col-12 d-flex justify-content end">
-            <a class="list" href="#"><span>TEST</span></a>
+            <a class="list" href="#"><span>X</span></a>
         </div>
         <div class="col-12">
             <fieldset>
@@ -15,6 +15,9 @@
                 <form action="" method="post">
                     <fieldset>
                         <div class="row">
+                            <div class="col-xl-3 text-center">
+                                <?php require './view/o-grocery.php';?>
+                            </div>
                             <div class="col-xl-3 text-center">
                                 <label for="nom"><span>Nom</span><span class="required">*</span><br><input class="input-form input-field" type="text" name="nom" alt="name" id=""></label>
                             </div>

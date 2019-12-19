@@ -1,7 +1,4 @@
 <?php
-// require './serv/utils/init.php';
-// chargerclass($c_tache, "./serv/C/");
-// chargerclass($c_manager, "./serv/C/");
 $manager = new ManagerTaches($conn);
 
 $manager->InitRepe($jour);
