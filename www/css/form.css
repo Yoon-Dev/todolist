@@ -113,18 +113,8 @@ input[type="date"] {
     box-shadow: 0px 2px 0px 2px #fff;
 }
 /* °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°° */
-.input-code{
-    transition: all .15s cubic-bezier(.95,.05,.8,.04);
-    background-color: transparent;
-    border-top: none;
-    border-right: none;
-    border-left: none;
-    border-bottom: 3px solid #ffe9cfe6;
-    font-size: 2em;
-    letter-spacing: .2em;
-    max-width: 100%;
-    text-align: center;
-    color: white;
+#multiselect{
+    width: 100px !important;
 }
 /* °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°° */
 /* °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°° */

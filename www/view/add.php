@@ -29,7 +29,7 @@
                             </div>
                             <div class="col-xl-3 text-center">
                                 <label for="types"><span>Type</span><span class="required">*</span><br>
-                                    <select class="input-form select-field" name="types" id="" alt="type">
+                                    <select class="input-form select-field" name="types" id="" alt="type>
                                         <option value="etude">ETUDE</option>
                                         <option value="general">GENERAL</option>
                                         <option value="devellopement">DEVELLOPEMENT</option>

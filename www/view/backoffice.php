@@ -1,6 +1,6 @@
 <?php require './serv/src/getRepe.php'; ?>
 <div class="contairer" id="task-list">
-  <div class="row">
+  <div class="row backoffice-container" id="tmp">
 <?php if($manager->notEmpty($empty)){foreach($taches as $tache){ ?>
     <div id="<?php echo$tache->id();?>" class="tache col-12 col-md-6 col-xl-4 text-center my-5" data-type="<?php echo$tache->types();?>">
         <div class="box">

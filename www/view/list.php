@@ -1,6 +1,6 @@
 <?php require './serv/src/getAll.php'; ?>
 <div class="contairer" id="task-list">
-  <div class="row">
+  <div class="row list-container">
 <?php if($manager->notEmpty($empty)){foreach($taches as $tache){ ?>
     <div id="<?php echo$tache->id();?>" class="tache col-12 col-md-6 col-xl-4 text-center my-5" data-type="<?php echo$tache->types();?>" data-istoday="<?php echo$tache->isToday();?>">
         <div class="box">

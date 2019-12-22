@@ -117,8 +117,8 @@ class ManagerTaches{
         // si elle sont de type "normal" ou si repe_jour est egal a jour
     $taches = [];
 
-    $q = $this->_conn->prepare('SELECT * FROM `tache` WHERE repe_jour is null OR repe_jour = :jour AND etat_repe = 1 OR repe_confirme = 2');
-    $q->execute([':jour' => $jour]);
+    $q = $this->_conn->prepare('SELECT * FROM `tache` WHERE repe_jour is null OR repe_jour LIKE :jour AND etat_repe = 1 OR repe_confirme = 2');
+    $q->execute([':jour' => "%".$jour."%"]);
     while ($donnees = $q->fetch(PDO::FETCH_ASSOC))
     {
 

@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/form.css">
     <link rel="stylesheet" href="./css/extension.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/css/select2.min.css" rel="stylesheet" />
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
     
 <title>TODOLIST</title>

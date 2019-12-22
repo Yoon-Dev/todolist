@@ -12,7 +12,6 @@ $(document).ready(function(){
         var detail = $(this).attr('data-detail');
         var type = $(this).attr('data-type');
         var date = $(this).attr('data-date');
-
         $( "div#edit input[name=id]" ).val(id);
         $( "div#edit input[name=nom]" ).val(nom);
         $( "div#edit textarea[name=detail]" ).val(detail);

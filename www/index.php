@@ -23,6 +23,7 @@
 
 
 <script type="text/javascript" src="./script/plugin/jquery/jquery-3.4.0.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js"></script>
 <!-- <script type="text/javascript" src="./script/display.js"></script>
 <script type="text/javascript" src="./script/form.js"></script>
 <script type="text/javascript" src="./script/dysplay-add-form"></script>   -->
@@ -32,6 +33,7 @@
 <script type="text/javascript" src="./script/front/filterTask.js"></script> 
 <script type="text/javascript" src="./script/front/edit.js"></script> 
 <script type="text/javascript" src="./script/front/edit_repe.js"></script>
+<script type="text/javascript" src="./script/front/add_repe.js"></script>
 <script type="text/javascript" src="./script/front/o-grocery.js"></script>
 
 <!-- New script back-->
