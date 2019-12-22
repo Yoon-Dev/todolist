@@ -111,7 +111,8 @@ class ManagerTaches{
         $q->execute(['id' => $repe_sup]);
     }
 // °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
-    public function getList($jour){
+    public function getList($jour)
+    {
         // recupere toute les taches dans la bdd
         // si elle sont de type "normal" ou si repe_jour est egal a jour
     $taches = [];
@@ -225,6 +226,6 @@ class ManagerTaches{
 // °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
     public function setDb(PDO $conn){$this->_conn = $conn;}
 
-// fin C
+// end
 }
 ?>
