@@ -1,5 +1,8 @@
 <div class="container text-center marg-contain">
     <div class="row">
+        <div class="col-12 d-flex justify-content end">
+            <a class="backoffice" href="#"><span>X</span></a>
+        </div>
         <div class="col-12">
             <!-- CHOIX du formulaire -->
             <fieldset>

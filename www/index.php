@@ -35,6 +35,7 @@
 <script type="text/javascript" src="./script/front/edit_repe.js"></script>
 <script type="text/javascript" src="./script/front/add_repe.js"></script>
 <script type="text/javascript" src="./script/front/o-grocery.js"></script>
+<script type="text/javascript" src="./script/front/search.js"></script>
 
 <!-- New script back-->
 <script type="text/javascript" src="./script/back/b-del.js"></script>  

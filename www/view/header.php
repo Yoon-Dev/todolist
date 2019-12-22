@@ -61,6 +61,9 @@ function hideLoader(){
                 <div class="col-4  margin-nav-res">
                     <li><a class="backoffice" data-filtre="developpement"href="#">backoffice</a></li>
                 </div>
+                <div class="col-4  margin-nav-res">
+                    <li><input type="text" name="search" id="search" data-view="#list"></li>
+                </div>
             </div>
         </ul>
         <div class="row">

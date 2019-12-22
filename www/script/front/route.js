@@ -13,6 +13,7 @@ $( "#list" ).show();
             $( ".page" ).hide();
             $( ".header-nav" ).show();
             $( "#list" ).show();
+            $( "#search" ).attr( "data-view", "#list" )
         })  
 
         // on a.add click
@@ -43,6 +44,7 @@ $( "#list" ).show();
             $( ".page" ).hide();
             $( ".header-nav" ).show();
             $( "#backoffice" ).show();
+            $( "#search" ).attr( "data-view", "#backoffice" );
         })
 
         // on a.add_repe click
