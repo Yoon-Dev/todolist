@@ -6,5 +6,4 @@
     <option value="<?php echo$val->ingredient()?>"><?php echo$val->titre()?></option>
   <?php }?>
   </select>
-
 </form> 

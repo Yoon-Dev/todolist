@@ -15,6 +15,7 @@ $(".lien-navigation-entente").click(function (ev) {
     }
     $('.navigation_entete').slideToggle();
 });
+
 $(".lien_jquery-nom").click(function (ev) {
     ev.preventDefault();
     if ($(this).hasClass("rotation-lien")) {

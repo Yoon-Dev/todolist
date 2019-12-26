@@ -1,6 +1,6 @@
 $(document).ready(function(){
-    
-    // DelOption();
+
+    var jour_tab = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
     $( "a.edit_repe" ).click(function(ev){
         ev.preventDefault();
         ev.stopPropagation();
@@ -18,140 +18,33 @@ $(document).ready(function(){
         $( "div#edit_repe input[name=nom_repe]" ).val(nom_repe);
         $( "div#edit_repe textarea[name=detail_repe]" ).val(detail_repe);
         TypeOption(type_repe);
-        JourOption(jour);
     })
 
 
     function DelOption()
     {
         $( "div#edit_repe select[name=types_repe]#types option" ).remove();
-        $( "div#edit_repe select[name=repe_jour]#jour option" ).remove();
     }
 
     function TypeOption(type)
     {
-        if(type === "etude"){
-            option =
-            `
-            <option value="etude">ETUDE</option>
-            <option value="general">GENERAL</option>
-            <option value="devellopement">DEVELLOPEMENT</option>
-            `;
-            $( "div#edit_repe select[name=types_repe]#types" ).append(option);
+        var first_option = "";
+        var last_option = "";
+        var types = ['etude', 'general', 'devellopement'];
+        for(i=0; i<types.length; i++){
+            if(types[i] == type){
+                first_option += 
+                `
+                <option value="`+types[i]+`">`+types[i].toUpperCase()+`</option>
+                `;
+            }else{
+                last_option += 
+                `
+                <option value="`+types[i]+`">`+types[i].toUpperCase()+`</option>
+                `;
+            }
         }
-        if(type === "general"){
-            option =
-            `
-            <option value="general">GENERAL</option>
-            <option value="etude">ETUDE</option>
-            <option value="devellopement">DEVELLOPEMENT</option>
-            `;
-            $( "div#edit_repe select[name=types_repe]#types" ).append(option);
-        }
-        if(type === "devellopement"){
-            option =
-            `
-            <option value="devellopement">DEVELLOPEMENT</option>
-            <option value="general">GENERAL</option>
-            <option value="etude">ETUDE</option>
-            `;
-            $( "div#edit_repe select[name=types_repe]#types" ).append(option);       
-        }
-    }
-
-    function JourOption(jour)
-    {
-        if(jour === "Mon"){
-            option =
-            `
-            <option value="Mon">Mon</option>
-            <option value="Tue">Tue</option>
-            <option value="Wed">Wed</option>
-            <option value="Thu">Thu</option>
-            <option value="Fri">Fri</option>
-            <option value="Sat">Sat</option>
-            <option value="Sun">Sun</option>
-            `;
-            $( "div#edit_repe select[name=repe_jour]#jour" ).append(option);
-        }
-        if(jour === "Tue"){
-            option =
-            `
-            <option value="Tue">Tue</option>
-            <option value="Mon">Mon</option>
-            <option value="Wed">Wed</option>
-            <option value="Thu">Thu</option>
-            <option value="Fri">Fri</option>
-            <option value="Sat">Sat</option>
-            <option value="Sun">Sun</option>
-            `;
-            $( "div#edit_repe select[name=repe_jour]#jour" ).append(option);
-        }
-        if(jour === "Wed"){
-            option =
-            `
-            <option value="Wed">Wed</option>
-            <option value="Mon">Mon</option>
-            <option value="Tue">Tue</option>
-            <option value="Wed">Wed</option>
-            <option value="Thu">Thu</option>
-            <option value="Fri">Fri</option>
-            <option value="Sat">Sat</option>
-            <option value="Sun">Sun</option>
-            `;
-            $( "div#edit_repe select[name=repe_jour]#jour" ).append(option);       
-        }
-        if(jour === "Thu"){
-            option =
-            `
-            <option value="Thu">Thu</option>
-            <option value="Mon">Mon</option>
-            <option value="Tue">Tue</option>
-            <option value="Wed">Wed</option>   
-            <option value="Fri">Fri</option>
-            <option value="Sat">Sat</option>
-            <option value="Sun">Sun</option>
-            `;
-            $( "div#edit_repe select[name=repe_jour]#jour" ).append(option);
-        }
-        if(jour === "Fri"){
-            option =
-            `
-            <option value="Fri">Fri</option>
-            <option value="Mon">Mon</option>
-            <option value="Tue">Tue</option>
-            <option value="Wed">Wed</option>
-            <option value="Thu">Thu</option>
-            <option value="Sat">Sat</option>
-            <option value="Sun">Sun</option>
-            `;
-            $( "div#edit_repe select[name=repe_jour]#jour" ).append(option);
-        }
-        if(jour === "Sat"){
-            option =
-            `
-            <option value="Sat">Sat</option>
-            <option value="Mon">Mon</option>
-            <option value="Tue">Tue</option>
-            <option value="Wed">Wed</option>
-            <option value="Thu">Thu</option>
-            <option value="Fri">Fri</option>
-            <option value="Sun">Sun</option>
-            `;
-            $( "div#edit_repe select[name=repe_jour]#jour" ).append(option);
-        }
-        if(jour === "Sun"){
-            option =
-            `
-            <option value="Sun">Sun</option>
-            <option value="Mon">Mon</option>
-            <option value="Tue">Tue</option>
-            <option value="Wed">Wed</option>
-            <option value="Thu">Thu</option>
-            <option value="Fri">Fri</option>
-            <option value="Sat">Sat</option>
-            `;
-            $( "div#edit_repe select[name=repe_jour]#jour" ).append(option);
-        }
+        option = first_option+last_option;
+        $( "div#edit_repe select[name=types_repe]#types" ).append(option);
     }
 })

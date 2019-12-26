@@ -24,15 +24,6 @@
                                 <label for="detail_repe"><span>Detail</span><br><textarea name="detail_repe" class="input-form textarea-field" id=""></textarea></label>
                             </div>
                             <div class="col-xl-3 text-center">
-                                <label for="types_repe"><span>Type</span><span class="required">*</span><br>
-                                    <select class="input-form select-field" name="types_repe" id="">
-                                        <option value="etude">ETUDE</option>
-                                        <option value="general">GENERAL</option>
-                                        <option value="devellopement">DEVELLOPEMENT</option>
-                                    </select>
-                                </label>
-                            </div>
-                            <div class="col-xl-3 text-center">
                                 <label repe_jour"><span>Jour</span><span class="required">*</span><br>
                                     <select class="input-form select-field multiselect" name="repe_jour" id="multiselect" multiple="multiple">
                                         <option value="Mon">Mon</option>
@@ -42,6 +33,15 @@
                                         <option value="Fri">Fri</option>
                                         <option value="Sat">Sat</option>
                                         <option value="Sun">Sun</option>
+                                    </select>
+                                </label>
+                            </div>
+                            <div class="col-xl-3 text-center">
+                                <label for="types_repe"><span>Type</span><span class="required">*</span><br>
+                                    <select class="input-form select-field" name="types_repe" id="">
+                                        <option value="etude">ETUDE</option>
+                                        <option value="general">GENERAL</option>
+                                        <option value="devellopement">DEVELLOPEMENT</option>
                                     </select>
                                 </label>
                             </div>

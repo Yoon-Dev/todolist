@@ -1,0 +1,14 @@
+.add-btn{
+    position: fixed;
+    bottom: 0;
+}
+.add-btn img{
+    width: 4em;
+    margin-right: 1.5rem;
+}
+.navbar-toggler{
+    border-color: transparent !important;
+}
+.navbar-toggler-icon{
+    background-image: url('../img/icone/burger.svg') !important;
+}

@@ -16,8 +16,15 @@
                         </div>
                         <div class="col-xl-3 text-center">
                             <label for="repe_jour"><span>Jour</span><span class="required">*</span><br>
-                                <select name="repe_jour" id="jour">
-                                </select>
+                            <select class="input-form select-field multiselect" name="repe_jour" id="multiselect_repe" multiple="multiple">
+                                <option value="Mon">Mon</option>
+                                <option value="Tue">Tue</option>
+                                <option value="Wed">Wed</option>
+                                <option value="Thu">Thu</option>
+                                <option value="Fri">Fri</option>
+                                <option value="Sat">Sat</option>
+                                <option value="Sun">Sun</option>
+                            </select>
                             </label>
                         </div>
                         <div class="col-xl-3 text-center">

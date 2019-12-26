@@ -6,14 +6,14 @@
         <div class="box">
             <div class="box-lien">
                 <div class="row">
-                    <div class="col-2 icone-box">
-                      <a class="del" href="#" data-id="<?php echo$tache->id();?>" data-simple="<?php echo$tache->IamSimple();?>" data-backoffice="non"><i class="fas fa-minus"></i>D</a>
+                    <div class="col-2 pr-0 icone-box d-flex justify-content-end">
+                      <a class="del" href="#" data-id="<?php echo$tache->id();?>" data-simple="<?php echo$tache->IamSimple();?>" data-backoffice="non"><i class="fas fa-minus"></i></a>
                     </div>
                     <div class="col-8">
                         <h2 class="nom-contenant <?php echo$tache->etat();?>"><?php echo$tache->nom();?></h2>
                     </div>
-                    <div class="col-2">
-                        <a class="lien_jquery-nom" href="#"><i class="fas fa-chevron-up"></i></a>
+                    <div class="col-2 icone-box d-flex justify-content-start">
+                        <a class="detail" href="#"><i class="fas fa-chevron-up"></i></a>
                     </div>
                 </div>
             </div>
@@ -35,7 +35,7 @@
                           data-detail="<?php echo$tache->detail();?>"
                           data-type="<?php echo$tache->types();?>"
                           data-date="<?php echo$tache->u_limite();?>"
-                          ><i class="far fa-edit"></i>E</a>
+                          ><i class="far fa-edit"></i></a>
 <?php } ?>
                         </div>
                     </div>
@@ -45,7 +45,7 @@
     </div>
 <?php }} ?>
   </div>
-  <div class="col-12">
-    <a class="add" href="#">Add</a>
+  <div class="col-12 d-flex justify-content-end add-btn mb-2">
+    <a class="add" href="#"><img src="./img/icone/add-btn.svg" alt=""></a>
   </div>
 </div>

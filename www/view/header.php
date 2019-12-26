@@ -17,25 +17,55 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/form.css">
     <link rel="stylesheet" href="./css/extension.css">
+    <link rel="stylesheet" href="./css/add-btn.css">
     <link href="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/css/select2.min.css" rel="stylesheet" />
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
     
 <title>TODOLIST</title>
 </head>
 
-<script>
-function hideLoader(){
-    document.getElementById("loader").style.display = "none";
-    document.getElementById("content").style.display = "block";
-}
-</script>
+<body data-master="list">
+<div id="content" class="container-fluid">
+    <div class="row">
+        <div class="col-12 p-0">
+            <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+                <a class="navbar-brand istoday" href="#"><h1 class="today-logo"><?php echo date("m-d"); ?></h1></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link home list" href="#">TÂCHES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link filter" data-filtre="etude" href="#">etu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link filter" data-filtre="general" href="#">général</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link filter" data-filtre="developpement"href="#">dev</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="backoffice" href="#">backoffice</a>
+                    </li>
+                    <li class="nav-item">
+                        <input type="text" name="search" id="search" data-view="#list">
+                    </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
 
 
-<body onload="hideLoader()" data-master="list">
-<img id="loader" src="./SVG-Loaders-master/svg-loaders/puff.svg" alt="loader">
-<div id="content" style ="display: none;">
-    <div class="container-fluid text-center header-nav">
-        <div class="row mt-2">
+
+
+
+
+
+<!-- 
             <div class="col-12">
                 <ul class="filtre_sencondaire">
                     <li>
@@ -68,8 +98,8 @@ function hideLoader(){
         </ul>
         <div class="row">
             <div class="col-12">
-                <h1 class="today-logo">
-                <a class="istoday" href="#"><?php echo date("m-d"); ?></a></h1>
+                
             </div>
-        </div>
+        </div> 
     </div>
+    -->
