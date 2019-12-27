@@ -1,6 +1,6 @@
 $(document).ready(function(){
     
-    $( "#search" ).keyup(function(ev){
+    $( "input[name=search]" ).keyup(function(){
 
         var search = $(this).val().toLowerCase()
         var view = $(this).attr('data-view')+" .tache";
@@ -16,7 +16,11 @@ $(document).ready(function(){
                     $(this).hide();
                 }
             })
-        }
-        
+        }   
     });
+    $( ".show-search" ).click(function(ev){
+        ev.preventDefault();
+        ev.stopPropagation(); 
+        $( ".search-area" ).show();
+    })
 })

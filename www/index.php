@@ -1,7 +1,7 @@
 <?php session_start();?>
 <?php require_once './view/header.php'; ?>
 <div class="container-fluid">
-    <div id="list" class="page">
+    <div id="list" class="page mt-5">
         <?php require './view/list.php';?>
     </div>
     <div id="edit" class="page">
@@ -10,7 +10,7 @@
     <div id="add" class="page">
         <?php require './view/add.php';?>
     </div>
-    <div id="backoffice" class="page">
+    <div id="backoffice" class="page mt-5">
         <?php require './view/backoffice.php';?>
     </div>
     <div id="add_repe" class="page">
@@ -20,10 +20,6 @@
         <?php require './view/edit_repe.php';?>
     </div>
 </div>
-
-
-
-
 
 <script type="text/javascript" src="./script/plugin/jquery/jquery-3.4.0.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js"></script>
@@ -40,7 +36,9 @@
 <script type="text/javascript" src="./script/front/add_repe.js"></script>
 <script type="text/javascript" src="./script/front/o-grocery.js"></script>
 <script type="text/javascript" src="./script/front/search.js"></script>
+<script type="text/javascript" src="./script/front/search-area.js"></script>
 <script type="text/javascript" src="./script/front/detail-task.js"></script>
+<script type="text/javascript" src="./script/front/burger.js"></script>
 
 <!-- New script back-->
 <script type="text/javascript" src="./script/back/b-del.js"></script>  

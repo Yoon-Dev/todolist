@@ -25,13 +25,13 @@ $(document).ready(function(){
         <div class="box">
             <div class="box-lien">
                 <div class="row">
-                    <div class="col-2 icone-box">
+                    <div class="col-2 pr-0 icone-box  d-flex justify-content-end">
                       <a class="del" href="#" data-id="reload" data-simple="true" data-backoffice="non" onclick="location.reload()"><i class="fas fa-minus"></i></a>
                     </div>
                     <div class="col-8">
                         <h2 class="nom-contenant bon">`+nom+`</h2>
                     </div>
-                    <div class="col-2">
+                    <div class="col-2 icone-box d-flex justify-content-start">
                         <a class="lien_jquery-nom" href="#"><i class="fas fa-chevron-up"></i></a>
                     </div>
                 </div>

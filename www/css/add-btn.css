@@ -2,13 +2,51 @@
     position: fixed;
     bottom: 0;
 }
+
 .add-btn img{
     width: 4em;
     margin-right: 1.5rem;
 }
-.navbar-toggler{
+
+#body .navbar-toggler{
     border-color: transparent !important;
 }
-.navbar-toggler-icon{
-    background-image: url('../img/icone/burger.svg') !important;
+
+#body .navbar-toggler-icon{
+    background-image: url('../img/icone/burger.svg');
+}
+
+.fixed-nav{
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+
+#body .nav-link{
+    color: black;
+}
+
+#navbarNav{
+    background-color: white;
+}
+.right{
+    right: -40px;
+}
+.left{
+    left: 0px;
+}
+.search-area{
+    display: none;
+    z-index: 999;
+    width: 100vh;
+    height: 33%;
+    background-color:white;
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-top: 20px;
+    left: 0px;
+    text-align: center;
+}
+.rm-search-area{
+    max-width: 1em;
 }

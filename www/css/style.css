@@ -124,7 +124,7 @@ fieldset {margin-top: 10px;}
     color: white;
     border: 2px solid white;
     background-color: black;
-    box-shadow: inset 0px -13px 16px 10px rgba(255, 255, 255, 0.23);
+    box-shadow: inset 0px -13px 16px 10px rgba(255, 255, 255, 0.16);
 }
 /* °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°° */
 .box-lien a {color: white;}

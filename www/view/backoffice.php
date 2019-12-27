@@ -39,7 +39,16 @@
     </div>
 <?php }} ?>
   </div>
-  <div class="col-12 d-flex justify-content-end add-btn mb-2">
-    <a class="add" href="#"><img src="./img/icone/add-btn.svg" alt=""></a>
+  <div class="d-flex justify-content-start add-btn mb-2 left">
+        <a class="show-search" href="#"><img src="./img/icone/search-btn.svg" alt=""></a>
+    </div>
+    <div class="col-6 d-flex justify-content-end add-btn mb-2 right">
+        <a class="add" href="#"><img src="./img/icone/add-btn.svg" alt=""></a>
+    </div>
+    <div class="col-12 add-btn search-area">
+        <input type="text" class="search" name="search" data-view="#backoffice">
+        <div class="">
+            <a class="rm-search-area" href="#"><img class="mr-0 mt-5 rm-search-area" src="./img/icone/rm-search-area.svg" alt=""></a>
+        </div>
   </div>
 </div>

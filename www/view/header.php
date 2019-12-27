@@ -24,82 +24,37 @@
 <title>TODOLIST</title>
 </head>
 
-<body data-master="list">
+<body data-master="list" id="body">
 <div id="content" class="container-fluid">
     <div class="row">
-        <div class="col-12 p-0">
+        <div class="col-12 p-0 fixed-nav">
             <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
-                <a class="navbar-brand istoday" href="#"><h1 class="today-logo"><?php echo date("m-d"); ?></h1></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <a class="navbar-brand istoday" href="#"><h1 class="today-logo mb-0"><?php echo date("m-d"); ?></h1></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" data-state="on">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link home list" href="#">TÂCHES</a>
+                        <a class="nav-link home list" href="#">tâches</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link filter" data-filtre="etude" href="#">etu</a>
+                        <a class="nav-link" data-filtre="etude" href="#">etu</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link filter" data-filtre="general" href="#">général</a>
+                        <a class="nav-link" data-filtre="general" href="#">général</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link filter" data-filtre="developpement"href="#">dev</a>
+                        <a class="nav-link" data-filtre="developpement"href="#">dev</a>
                     </li>
                     <li class="nav-item">
-                        <a class="backoffice" href="#">backoffice</a>
+                        <a class="nav-link backoffice" href="#">backoffice</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <input type="text" name="search" id="search" data-view="#list">
-                    </li>
+                    </li> -->
                     </ul>
                 </div>
             </nav>
         </div>
     </div>
-
-
-
-
-
-
-
-<!-- 
-            <div class="col-12">
-                <ul class="filtre_sencondaire">
-                    <li>
-                        <h4><a class="home list" href="#">TÂCHES</a></h4>
-                    </li>
-                    <li class="mx-2">
-                        <h4><a class="lien-navigation-entente" href="#"><i class="fas fa-arrow-up"></i></a></h4>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <ul class="navigation_entete mb-4">
-            <div class="ml-0 row justify-content-md-center" style="min-width: 100%;">
-                <div class="col-4  margin-nav-res">
-                    <li><a class="filter" data-filtre="etude" href="#">etu</a></li>
-                </div>
-                <div class="col-4 margin-nav-res">
-                    <li><a class="filter" data-filtre="general" href="#">général</a></li>
-                </div>
-                <div class="col-4  margin-nav-res">
-                    <li><a class="filter" data-filtre="developpement"href="#">dev</a></li>
-                </div>
-                <div class="col-4  margin-nav-res">
-                    <li><a class="backoffice" data-filtre="developpement"href="#">backoffice</a></li>
-                </div>
-                <div class="col-4  margin-nav-res">
-                    <li><input type="text" name="search" id="search" data-view="#list"></li>
-                </div>
-            </div>
-        </ul>
-        <div class="row">
-            <div class="col-12">
-                
-            </div>
-        </div> 
-    </div>
-    -->
