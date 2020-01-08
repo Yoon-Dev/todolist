@@ -1,7 +1,7 @@
-<div class="container text-center marg-contain">
+<div class="container text-center">
     <div class="row">
-        <div class="col-12 d-flex justify-content end">
-            <a class="list" href="#"><span>X</span></a>
+        <div class="col-12 d-flex justify-content-end add-btn mb-2 right">
+            <a class="list" href="#"><img src="./img/icone/back-btn.svg" alt=""></a>
         </div>
         <div class="col-12">
             <fieldset>
@@ -19,27 +19,27 @@
                                 <?php require './view/o-grocery.php';?>
                             </div>
                             <div class="col-xl-3 text-center">
-                                <label for="nom"><span>Nom</span><span class="required">*</span><br><input class="input-form input-field" type="text" name="nom" alt="name" id=""></label>
+                                <label for="nom"><span>Nom</span><span class="required">*</span><br><input class="input-form input-field" type="text" name="nom" alt="name"></label>
                             </div>
                             <div class="col-xl-3 text-center">
-                                <label for="detail"><span>Detail</span><br><textarea class="input-form textarea-field" name="detail" id="" alt="detail"></textarea></label>
+                                <label for="detail"><span>Detail</span><br><textarea class="input-form textarea-field" name="detail" alt="detail"></textarea></label>
                             </div>
                             <div class="col-xl-3 text-center">
-                                <label for="limite"><span>Limite</span><span class="required">*</span><br><input class="input-form" type="date" name="limite" id="" value="<?php echo date("Y-m-d"); ?>" alt="date"></label>
+                                <label for="limite"><span>Limite</span><span class="required">*</span><br><input class="input-form" type="date" name="limite" value="<?php echo date("Y-m-d"); ?>" alt="date"></label>
                             </div>
                             <div class="col-xl-3 text-center">
                                 <label for="types"><span>Type</span><span class="required">*</span><br>
-                                    <select class="input-form select-field" name="types" id="" alt="type>
+                                    <select class="input-form select-field" name="types" alt="type">
                                         <option value="etude">ETUDE</option>
                                         <option value="general">GENERAL</option>
-                                        <option value="devellopement">DEVELLOPEMENT</option>
+                                        <option value="developpement">DEVELOPPEMENT</option>
                                     </select>
                                 </label>
                             </div>
                         </div>
                         <div class="row mt-5">
                             <div class="col-xl-12 text-center">
-                                <label for="tache_simple"><input id="sub-btn" type="submit" value="submit" name="tache_simple" alt="sub"></label>
+                                <label for="tache_simple"><input class="sub-btn" type="submit" value="submit" name="tache_simple" alt="sub"></label>
                             </div>
                         </div>
                     </fieldset>

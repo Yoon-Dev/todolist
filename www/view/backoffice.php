@@ -1,4 +1,4 @@
-<?php require './serv/src/getRepe.php'; ?>
+<?php require './serv/src/getRepe.php';?>
 <div class="contairer" id="task-list">
   <div class="row backoffice-container" id="tmp">
 <?php if($manager->notEmpty($empty)){foreach($taches as $tache){ ?>
@@ -12,7 +12,7 @@
                     <div class="col-8">
                         <h2 class="nom-contenant <?php echo$tache->etat();?>"><?php echo$tache->nom();?></h2>
                     </div>
-                    <div class="col-2 icone-box d-flex justify-content-start">
+                    <div class="col-2 icone-box d-flex justify-content-start pr-0">
                         <a class="detail" href="#"><i class="fas fa-chevron-up"></i></a>
                     </div>
                 </div>
@@ -43,10 +43,10 @@
         <a class="show-search" href="#"><img src="./img/icone/search-btn.svg" alt=""></a>
     </div>
     <div class="col-6 d-flex justify-content-end add-btn mb-2 right">
-        <a class="add" href="#"><img src="./img/icone/add-btn.svg" alt=""></a>
+        <a class="add_repe" href="#"><img src="./img/icone/add-btn.svg" alt=""></a>
     </div>
     <div class="col-12 add-btn search-area">
-        <input type="text" class="search" name="search" data-view="#backoffice">
+        <input class="search" placeholder="search" type="text" class="search" name="search" data-view="#backoffice">
         <div class="">
             <a class="rm-search-area" href="#"><img class="mr-0 mt-5 rm-search-area" src="./img/icone/rm-search-area.svg" alt=""></a>
         </div>

@@ -1,7 +1,7 @@
 <div class="container text-center marg-contain">
     <div class="row">
-        <div class="col-12 d-flex justify-content end">
-            <a class="backoffice" href="#"><span>X</span></a>
+        <div class="col-12 d-flex justify-content-end add-btn mb-2 righ">
+            <a class="backoffice" href="#"><img class="mr-3" src="./img/icone/back-btn.svg" alt=""></a>
         </div>
         <div class="col-12">
             <!-- CHOIX du formulaire -->
@@ -18,10 +18,10 @@
                     <fieldset>
                         <div class="row">
                             <div class="col-xl-3 text-center">
-                                <label for="nom_repe"><span>Nom</span><span class="required">*</span><br><input type="text" class="input-form input-field" name="nom_repe" id=""></label>
+                                <label for="nom_repe"><span>Nom</span><span class="required">*</span><br><input type="text" class="input-form input-field" name="nom_repe"></label>
                             </div>
                             <div class="col-xl-3 text-center">
-                                <label for="detail_repe"><span>Detail</span><br><textarea name="detail_repe" class="input-form textarea-field" id=""></textarea></label>
+                                <label for="detail_repe"><span>Detail</span><br><textarea name="detail_repe" class="input-form textarea-field"></textarea></label>
                             </div>
                             <div class="col-xl-3 text-center">
                                 <label repe_jour"><span>Jour</span><span class="required">*</span><br>
@@ -38,17 +38,17 @@
                             </div>
                             <div class="col-xl-3 text-center">
                                 <label for="types_repe"><span>Type</span><span class="required">*</span><br>
-                                    <select class="input-form select-field" name="types_repe" id="">
+                                    <select class="input-form select-field" name="types_repe">
                                         <option value="etude">ETUDE</option>
                                         <option value="general">GENERAL</option>
-                                        <option value="devellopement">DEVELLOPEMENT</option>
+                                        <option value="developpement">DEVELOPPEMENT</option>
                                     </select>
                                 </label>
                             </div>
                         </div>
                         <div class="row mt-5">
                             <div class="col-12 text-center">
-                                <label for="tache_repe"><input id="sub-btn" type="submit" name="tache_repe" value="submit"></label>
+                                <label for="tache_repe"><input class="sub-btn" type="submit" name="tache_repe" value="submit"></label>
                             </div>
                         </div>
                     </fieldset>

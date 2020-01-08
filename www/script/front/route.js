@@ -10,11 +10,11 @@ $( "#list" ).show();
         $( "a.list" ).click(function(ev){
             ev.preventDefault();
             ev.stopPropagation();
+            
             $( ".page" ).hide();
-            $( ".header-nav" ).show();
-            $( "#list" ).show();
-            $( "#search" ).attr( "data-view", "#list" )
-        })  
+            $( "#list" ).fadeIn();
+            $( "#search" ).attr( "data-view", "#list" );
+        });  
 
         // on a.add click
         $( "a.add" ).click(function(ev){
@@ -22,9 +22,8 @@ $( "#list" ).show();
             ev.stopPropagation();
             
             $( ".page" ).hide();
-            $( ".header-nav" ).hide();
-            $( "#add" ).show();    
-        })
+            $( "#add" ).fadeIn();    
+        });
 
         // on a.edit click
         $( "a.edit" ).click(function(ev){
@@ -32,30 +31,25 @@ $( "#list" ).show();
             ev.stopPropagation();
 
             $( ".page" ).hide();
-            $( ".header-nav" ).hide();
-            $( "#edit" ).show();
-        })
+            $( "#edit" ).fadeIn();
+        });
 
         // on a.back click
         $( "a.backoffice" ).click(function(ev){
             ev.preventDefault();
             ev.stopPropagation();
-
             $( ".page" ).hide();
-            $( ".header-nav" ).show();
-            $( "#backoffice" ).show();
+            $( "#backoffice" ).fadeIn();
             $( "#search" ).attr( "data-view", "#backoffice" );
-        })
+        });
 
         // on a.add_repe click
         $( "a.add_repe" ).click(function(ev){
             ev.preventDefault();
             ev.stopPropagation();
-            
             $( ".page" ).hide();
-            $( ".header-nav" ).hide();
-            $( "#add_repe" ).show();    
-        })
+            $( "#add_repe" ).fadeIn();    
+        });
 
         // on a.edit_repe click
         $( "a.edit_repe" ).click(function(ev){
@@ -63,9 +57,8 @@ $( "#list" ).show();
             ev.stopPropagation();
             
             $( ".page" ).hide();
-            $( ".header-nav" ).hide();
-            $( "#edit_repe" ).show();    
-        })
+            $( "#edit_repe" ).fadeIn();    
+        });
 
     }
 })

@@ -3,7 +3,7 @@
   <div class="row list-container">
 <?php if($manager->notEmpty($empty)){foreach($taches as $tache){ ?>
     <div id="<?php echo$tache->id();?>" class="tache col-12 col-md-6 col-xl-4 text-center my-5" data-type="<?php echo$tache->types();?>" data-istoday="<?php echo$tache->isToday();?>">
-        <div class="box">
+        <div class="box init-box">
             <div class="box-lien">
                 <div class="row">
                     <div class="col-2 pr-0 icone-box d-flex justify-content-end">
@@ -12,7 +12,7 @@
                     <div class="col-8">
                         <h2 class="nom-contenant <?php echo$tache->etat();?>"><?php echo$tache->nom();?></h2>
                     </div>
-                    <div class="col-2 icone-box d-flex justify-content-start">
+                    <div class="col-2 icone-box d-flex justify-content-start pr-0">
                         <a class="detail" href="#"><i class="fas fa-chevron-up"></i></a>
                     </div>
                 </div>
@@ -52,7 +52,7 @@
         <a class="add" href="#"><img src="./img/icone/add-btn.svg" alt=""></a>
     </div>
     <div class="col-12 add-btn search-area">
-        <input type="text" name="search" data-view="#list">
+        <input class="search" placeholder="search" type="text" name="search" data-view="#list">
         <div class="">
             <a class="rm-search-area" href="#"><img class="mr-0 mt-5 rm-search-area" src="./img/icone/rm-search-area.svg" alt=""></a>
         </div>

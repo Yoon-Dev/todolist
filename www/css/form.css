@@ -22,7 +22,7 @@ legend{
 .lien-select-form{
     margin: 10px;
     color: #ffffffcf;
-    background: url('../img/gif/link_form_gif.gif') 0px 0px;
+    background: url('https://media.giphy.com/media/3oEdv8UZ1tXKZ0fThu/source.gif') 0px 0px;
     background-size: cover;
     background-clip: text;
     -webkit-background-clip: text;
@@ -73,9 +73,9 @@ legend{
 	padding: 8px 15px 8px 15px;
 	background: navy;
 	color: #fff;
-	box-shadow: 1px 1px 4px rgb(46, 13, 13);;
-	-moz-box-shadow: 1px 1px 4px rgb(46, 13, 13);;
-	-webkit-box-shadow: 1px 1px 4px rgb(46, 13, 13);;
+	box-shadow: 1px 1px 8px rgb(46, 13, 13);;
+	-moz-box-shadow: 1px 1px 8px rgb(46, 13, 13);;
+	-webkit-box-shadow: 1px 1px 8px rgb(46, 13, 13);;
 	border-radius: 3px;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
@@ -100,21 +100,22 @@ input[type="date"] {
     display: inline-block !important;
     visibility: visible !important;
 }
-/* °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
-/* CODE */
-/* °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°° */
-.input-sub{
-    transition: all .15s cubic-bezier(.95,.05,.8,.04);
-    padding: 10px;
-    padding-left: 30px;
-    padding-right: 30px;
-    border: none;
-    background-color: #ffe9cfe6;
-    box-shadow: 0px 2px 0px 2px #fff;
+label[for=Grocery]{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input[name=grocery]{
+    margin-left: .5em;
 }
 /* °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°° */
 #multiselect, #multiselect_repe{
     width: 100px !important;
+}
+.search{
+    border: none;
+    border-bottom: 3px solid
+black;
 }
 /* °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°° */
 /* °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°° */

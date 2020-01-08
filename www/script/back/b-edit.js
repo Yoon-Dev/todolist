@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-    $( "div#edit #sub-btn" ).click(function(ev){
+    $( "div#edit .sub-btn" ).click(function(ev){
         ev.preventDefault();
         ev.stopPropagation();
         var id = $( "div#edit input[name=id]" ).val();

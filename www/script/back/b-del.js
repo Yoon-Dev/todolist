@@ -12,7 +12,8 @@ $(document).ready(function(){
         var element = "#"+id;
 
         $.get( "./serv/src/del.php", { id: id, is_simple: is_simple, backoffice: backoffice }, function(){
-            $(element).remove();
+            $(element).fadeOut();
+            setTimeout(function(){ $(element).remove(); }, 400);
         } );
     })
 })

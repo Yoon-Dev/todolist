@@ -1,0 +1,7 @@
+.init-box{
+    opacity: 0;
+    overflow: hidden;
+}
+.in{
+    opacity: 1;
+}

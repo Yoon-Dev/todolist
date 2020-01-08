@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-    $( "div#add_repe #sub-btn" ).click(function(ev){
+    $( "div#add_repe .sub-btn" ).click(function(ev){
         ev.preventDefault();
         ev.stopPropagation();
 

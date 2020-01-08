@@ -6,12 +6,12 @@ $(document).ready(function(){
         var view = $(this).attr('data-view')+" .tache";
 
         if($(this).val() == ""){
-            $(view).show();   
+            $(view).fadeIn();   
         }else{
             // $( ".tache" ).hide();
             $(view).each(function(){
                 if($(this).find( "h2.nom-contenant" ).text().toLowerCase().indexOf(search) !== -1){
-                    $(this).show();
+                    $(this).fadeIn();
                 }else{
                     $(this).hide();
                 }
@@ -21,6 +21,6 @@ $(document).ready(function(){
     $( ".show-search" ).click(function(ev){
         ev.preventDefault();
         ev.stopPropagation(); 
-        $( ".search-area" ).show();
+        $( ".search-area" ).fadeIn(100);
     })
 })

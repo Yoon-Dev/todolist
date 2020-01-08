@@ -1,6 +1,6 @@
 <?php session_start();?>
 <?php require_once './view/header.php'; ?>
-<div class="container-fluid">
+<div class="container-fluid mr-0">
     <div id="list" class="page mt-5">
         <?php require './view/list.php';?>
     </div>
@@ -39,7 +39,7 @@
 <script type="text/javascript" src="./script/front/search-area.js"></script>
 <script type="text/javascript" src="./script/front/detail-task.js"></script>
 <script type="text/javascript" src="./script/front/burger.js"></script>
-
+<script type="text/javascript" src="./script/front/header.js"></script>
 <!-- New script back-->
 <script type="text/javascript" src="./script/back/b-del.js"></script>  
 <script type="text/javascript" src="./script/back/b-edit.js"></script>

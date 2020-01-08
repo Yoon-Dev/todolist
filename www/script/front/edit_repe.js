@@ -1,6 +1,5 @@
 $(document).ready(function(){
 
-    var jour_tab = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
     $( "a.edit_repe" ).click(function(ev){
         ev.preventDefault();
         ev.stopPropagation();
@@ -13,7 +12,6 @@ $(document).ready(function(){
         var type_repe = $(this).attr('data-type');
         var jour = $(this).attr('data-jour');
 
-        console.log(id, nom_repe, detail_repe, type_repe, jour);
         $( "div#edit_repe input[name=id]" ).val(id);
         $( "div#edit_repe input[name=nom_repe]" ).val(nom_repe);
         $( "div#edit_repe textarea[name=detail_repe]" ).val(detail_repe);
@@ -30,7 +28,7 @@ $(document).ready(function(){
     {
         var first_option = "";
         var last_option = "";
-        var types = ['etude', 'general', 'devellopement'];
+        var types = ['etude', 'general', 'developpement'];
         for(i=0; i<types.length; i++){
             if(types[i] == type){
                 first_option += 

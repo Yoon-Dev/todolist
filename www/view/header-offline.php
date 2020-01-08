@@ -20,8 +20,6 @@
     <link rel="stylesheet" href="./css/form.css">
     <link rel="stylesheet" href="./css/extension.css">
     <link rel="stylesheet" href="./css/add-btn.css">
-    <link rel="stylesheet" href="./css/animation.css">
-    <link rel="stylesheet" href="./css/loader.css">
     <link href="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/css/select2.min.css" rel="stylesheet" />
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
     <script>
@@ -35,18 +33,17 @@
 <title>TODOLIST</title>
 </head>
 
-<body data-master="list" id="body">
-<div id="loader" class="loader"></div>
-<!-- <img id="loader" src="./SVG-Loaders-master/svg-loaders/puff.svg"> -->
+<body data-master="list" id="body" style="background: url('https://media.giphy.com/media/l46CD836UtIyQO00g/source.gif');background-size: cover;background-position: center;">
+<img id="loader" src="./SVG-Loaders-master/svg-loaders/puff.svg">
 <div id="content" class="container-fluid" style ="display: none;">
     <div class="row">
         <div class="col-12 p-0 fixed-nav">
-            <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
                 <a class="navbar-brand istoday" href="#"><h1 class="today-logo mb-0"><?php echo date("m-d"); ?></h1></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" data-state="on">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="collapse navbar-collapse bg-transparent" id="navbarNav">
                     <ul class="navbar-nav">
                     <li class="nav-item active">
                         <a class="nav-link home list" href="#">tâches</a>

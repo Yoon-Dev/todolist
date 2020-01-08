@@ -1,9 +1,14 @@
 <?php require'./serv/src/o-grocery.php';?>
- <form>
-  <label for="Grocery"><span>Grocery</span><input type="checkbox" name="grocery" value="grocery">
-  <select name="ingredient" class="">
-  <?php foreach($recettes as $val){?>
-    <option value="<?php echo$val->ingredient()?>"><?php echo$val->titre()?></option>
-  <?php }?>
-  </select>
-</form> 
+<div class="row">
+  <div class="col-12">
+    <label for="Grocery"><span>Grocery</span><input class="input-form input-field" type="checkbox" name="grocery" value="grocery">
+  </div>
+  <div class="col-12">
+    <select name="ingredient" class="input-form select-field mw-100 mb-2">
+    <?php foreach($recettes as $val){?>
+      <option value="<?php echo$val->ingredient()?>"><?php echo$val->titre()?></option>
+    <?php }?>
+    </select>
+  </div>
+</div>
+

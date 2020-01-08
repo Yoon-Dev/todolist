@@ -33,7 +33,7 @@ $(document).ready(function(){
             `
             <option value="etude">ETUDE</option>
             <option value="general">GENERAL</option>
-            <option value="devellopement">DEVELLOPEMENT</option>
+            <option value="developpement">DEVELOPPEMENT</option>
             `;
             $( "div#edit select[name=types]#edit" ).append(option);
         }
@@ -42,14 +42,14 @@ $(document).ready(function(){
             `
             <option value="general">GENERAL</option>
             <option value="etude">ETUDE</option>
-            <option value="devellopement">DEVELLOPEMENT</option>
+            <option value="developpement">DEVELOPPEMENT</option>
             `;
             $( "div#edit select[name=types]#edit" ).append(option);
         }
         if(type === "devellopement"){
             option =
             `
-            <option value="devellopement">DEVELLOPEMENT</option>
+            <option value="developpement">DEVELOPPEMENT</option>
             <option value="general">GENERAL</option>
             <option value="etude">ETUDE</option>
             `;
