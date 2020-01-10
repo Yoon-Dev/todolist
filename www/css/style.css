@@ -151,7 +151,7 @@ fieldset {margin-top: 10px;}
 .mauvais {color: red !important;}
 /* °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°° */
 /* °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°° */
-.marg-contain {padding-top: 140px;}
+.marg-contain {padding-top: 50px;}
 /* °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°° */
 /* repsonsive */
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
@@ -165,7 +165,7 @@ fieldset {margin-top: 10px;}
         font-size: 1.8em !important;
     }
     .marg-contain {
-        padding-top: 220px !important;
+        padding-top: 100px !important;
     }
     .today-logo {
         font-size: 2.8em !important;
@@ -182,9 +182,6 @@ fieldset {margin-top: 10px;}
     }
     .navigation_entete li a:hover, .filtre_sencondaire li a:not(.lien-navigation-entente):hover, .navigation_entete li a:focus, .filtre_sencondaire li a:not(.lien-navigation-entente):focus, .navigation_entete li a:active, .filtre_sencondaire li a:not(.lien-navigation-entente):active, .lien-select-form_click {
         font-size: 1.5em !important;
-    }
-    .marg-contain {
-        padding-top: 200px !important;
     }
     .today-logo {
         font-size: 2.4em !important;

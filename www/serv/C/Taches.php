@@ -63,7 +63,8 @@ class Taches{
         // Test si la tache est à faire aujourd'hui
             $today = date("m-d");
             $jour = date("D");
-            if($this->limite() === $today || $this->repe_jour() === $jour){
+            ;
+            if($this->limite() === $today || (strpos($this->repe_jour(), $jour[0], 0) - strpos($this->repe_jour(), $jour[1], 0)) === -1 || $this->etat() === 'mauvais'){
                 return "yes";
             }else{
                 return "nope";

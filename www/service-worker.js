@@ -33,7 +33,6 @@ var urlsToCache = [
   './script/back/b-edit.js',
   './script/back/b-add.js',
   './script/back/b-add_repe.js',
-  './script/front/offline.js'
 ];
 
 self.addEventListener('install', function(event) {

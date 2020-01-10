@@ -7,24 +7,19 @@ $(document).ready(function(){
             $( "div#add select[name=ingredient]" ).show();
             $( "div#add input[name=nom]" ).val('Course');
             $( "div#add select[name=types]" ).val('etude');
-            setDetail();
+            // setDetail();
             ChangeOption(checked);
-
         }else{
             $( "div#add select[name=ingredient]" ).hide();
             $( "div#add input[name=nom]" ).val("");
             $( "div#add textarea[name=detail]" ).val("");
             ChangeOption(checked);
         }
-        
     })
 
-    function setDetail()
-    {
-        $( "div#add select[name=ingredient] option" ).click(function(){
-            $( "div#add textarea[name=detail]" ).val($(this).val());
-        })
-    }
+    $( "div#add select[name=ingredient]" ).change(function(){
+        $( "div#add textarea[name=detail]" ).val($(this).val());
+    })
 
     function ChangeOption(checked)
     {

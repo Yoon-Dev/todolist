@@ -1,4 +1,4 @@
-<div class="container text-center">
+<div class="container text-center marg-contain">
     <div class="row">
         <div class="col-12 d-flex justify-content-end add-btn mb-2 righ">
             <a class="backoffice" href="#"><img class="mr-3" src="./img/icone/back-btn.svg" alt=""></a>

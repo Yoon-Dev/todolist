@@ -2,6 +2,7 @@ $(document).ready(function(){
     
     var allBox = document.querySelectorAll('.box');
     var heightTab = [];
+    var old_scope = 'tâches';
     addEventListenerByClass('backoffice', 'click', Allanim);
     addEventListenerByClass('list', 'click', Allanim);
     $( ".list-info-tache" ).hide();
@@ -43,24 +44,33 @@ $(document).ready(function(){
 
     function Allanim() {
         heightTab = [];
-        init();
-        setTimeout(function(){ animBox(); }, 500);
+        var curr_scope = this.innerText;
+        init(curr_scope, old_scope);
+        if(curr_scope != ""){
+            setTimeout(function(){ animBox(curr_scope, old_scope);if(curr_scope){old_scope = curr_scope;};}, 500);
+        }else{
+            animBox(curr_scope, old_scope);
+            if(curr_scope){old_scope = curr_scope;}
+        }
     }
+ 
+    function init(curr_scope, old_scope) {
 
-    
-    function init() {
         for(var i = 0; i<allBox.length; i++){ 
             heightTab.push(allBox[i].clientHeight);
-            allBox[i].style.height = '0px';
+            if(curr_scope != old_scope){
+                allBox[i].style.height = '0px';
+            }
         }
     }
 
-    function animBox() {
+    function animBox(curr_scope, old_scope) {
         for(var i = 0; i<allBox.length; i++){
+            // allBox[i].style.display = '';
             allBox[i].classList.remove('init-box');
             allBox[i].classList += ' in';
-            if(heightTab[i] != 0){
-                allBox[i].style.height = heightTab[i]+'px';
+            if(heightTab[i] != 0 && curr_scope != old_scope && curr_scope != ""){
+                allBox[i].style.height = heightTab[i]+4.5+'px';
             }else{
                 allBox[i].style.height = 'auto';
             } 

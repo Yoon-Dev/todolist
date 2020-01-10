@@ -46,7 +46,7 @@ $(document).ready(function(){
             `;
             $( "div#edit select[name=types]#edit" ).append(option);
         }
-        if(type === "devellopement"){
+        if(type === "developpement"){
             option =
             `
             <option value="developpement">DEVELOPPEMENT</option>

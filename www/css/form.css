@@ -21,11 +21,8 @@ legend{
 /* °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°° */
 .lien-select-form{
     margin: 10px;
-    color: #ffffffcf;
-    background: url('https://media.giphy.com/media/3oEdv8UZ1tXKZ0fThu/source.gif') 0px 0px;
-    background-size: cover;
-    background-clip: text;
-    -webkit-background-clip: text;
+    color: navy;
+    font-weight: 700;
 }
 /* °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°° */
 .lien-select-form_click{
